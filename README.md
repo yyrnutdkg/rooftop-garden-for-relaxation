@@ -58,3 +58,6 @@ ___
 4. β版をRUNTEQ内リリース（MVP）：7/22〆切
 5. 本番リリース：7月末〜8月頭
 ___
+
+## 画面遷移図
+https://www.figma.com/file/wPhKvydl1QgAsYCrWt5hSZ/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?node-id=0%3A1
