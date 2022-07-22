@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_22_152408) do
+ActiveRecord::Schema.define(version: 2022_07_22_160441) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,15 @@ ActiveRecord::Schema.define(version: 2022_07_22_152408) do
     t.text "comment", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "place_tags", force: :cascade do |t|
+    t.bigint "place_id", null: false
+    t.bigint "tag_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["place_id"], name: "index_place_tags_on_place_id"
+    t.index ["tag_id"], name: "index_place_tags_on_tag_id"
   end
 
   create_table "places", force: :cascade do |t|
@@ -63,5 +72,7 @@ ActiveRecord::Schema.define(version: 2022_07_22_152408) do
   end
 
   add_foreign_key "events", "places"
+  add_foreign_key "place_tags", "places"
+  add_foreign_key "place_tags", "tags"
   add_foreign_key "stores", "places"
 end
