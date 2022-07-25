@@ -60,4 +60,5 @@ gem 'net-smtp'
 group :test do
   gem 'capybara'
   gem 'faker'
+  gem 'webdrivers'
 end
