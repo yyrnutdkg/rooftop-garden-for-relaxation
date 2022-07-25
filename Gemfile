@@ -62,3 +62,7 @@ group :test do
   gem 'faker'
   gem 'webdrivers'
 end
+
+
+gem 'slim-rails'
+gem 'html2slim'
