@@ -6,4 +6,6 @@ class Place < ApplicationRecord
   has_many :stores
 
   validates :name, presence: true
+
+  scope :place_name_contain, ->(word) { where('name LIKE ?', "%#{word}%") }
 end

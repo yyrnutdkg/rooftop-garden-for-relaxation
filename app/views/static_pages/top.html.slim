@@ -1,3 +1,7 @@
 h1 StaticPages#top
 p Find me in app/views/static_pages/top.html.slim
 p toppage
+
+= form_with model: @search_places_form, scope: :q, url: places_path, method: :get do |f|
+  = f.search_field :name, {place_holder: '屋上庭園名'}
+  = f.submit '検索', class: %w[btn btn-default btn-flat]
