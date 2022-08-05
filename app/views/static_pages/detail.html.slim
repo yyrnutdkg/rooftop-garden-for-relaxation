@@ -1,0 +1,6 @@
+h1 StaticPages#search_detail
+
+
+= form_with model: @search_places_form, scope: :q, url: places_path, method: :get do |f|
+  = f.select :tag_id, Tag.pluck(:name, :id)
+  = f.submit '検索'

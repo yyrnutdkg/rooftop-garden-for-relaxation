@@ -8,4 +8,5 @@ class Place < ApplicationRecord
   validates :name, presence: true
 
   scope :place_name_contain, ->(word) { where('name LIKE ?', "%#{word}%") }
+  scope :by_tag, ->(tag_id) { joins(:place_tags).where(place_tags: {tag_id: tag_id}) }
 end

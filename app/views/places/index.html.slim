@@ -4,3 +4,5 @@ p Find me in app/views/places/index.html.slim
 tbody
   - @places.each do |place|
     div = place.name
+    - place.tags.each do |tag|
+      div = tag.name
