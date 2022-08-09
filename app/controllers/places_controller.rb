@@ -10,6 +10,6 @@ class PlacesController < ApplicationController
   private
 
   def search_params
-    params[:q]&.permit(:name, :tag_id)
+    params[:q]&.permit(:name, :business_hours, :tag_id)
   end
 end

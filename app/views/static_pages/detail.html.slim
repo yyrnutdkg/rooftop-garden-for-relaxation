@@ -2,5 +2,6 @@ h1 StaticPages#search_detail
 
 
 = form_with model: @search_places_form, scope: :q, url: places_path, method: :get do |f|
-  = f.select :tag_id, Tag.pluck(:name, :id)
+  = f.select :tag_id, Tag.pluck(:name, :id), {include_blank:'カテゴリ'}
+  = f.time_field :business_hours
   = f.submit '検索'

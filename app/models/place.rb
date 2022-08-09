@@ -9,4 +9,5 @@ class Place < ApplicationRecord
 
   scope :place_name_contain, ->(word) { where('name LIKE ?', "%#{word}%") }
   scope :by_tag, ->(tag_id) { joins(:place_tags).where(place_tags: {tag_id: tag_id}) }
+  scope :by_business_hours, -> (business_hours) { where('end_time > ?', business_hours) }
 end

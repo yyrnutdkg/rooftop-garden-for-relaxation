@@ -4,6 +4,7 @@ RSpec.describe "SearchFuncs", type: :system do
   let!(:place_name) {create(:place, name: 'placeテスト1')}
   describe '検索機能' do
     let!(:place_tag) {create(:place, :with_tag, tag_name: '新宿')}
+    let!(:open_place){create(:place, start_time:'10:00', end_time: '20:00')}
 
 
     context '施設名検索' do
@@ -22,6 +23,14 @@ RSpec.describe "SearchFuncs", type: :system do
         end
         click_button '検索'
         expect(page).to have_content(place_tag.name)
+      end
+    end
+    context '時間を使った検索' do
+      it '検索結果が表示される' do
+        visit search_detail_path
+        fill_in 'q[business_hours]', with: '18:00'
+        click_button '検索'
+        expect(page).to have_content(open_place.name)
       end
     end
   end

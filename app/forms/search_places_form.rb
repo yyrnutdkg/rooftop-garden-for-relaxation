@@ -4,6 +4,7 @@ class SearchPlacesForm
 
   attribute :name, :string
   attribute :tag_id, :integer
+  attribute :business_hours, :time
 
   def search
     relation = Place.distinct
@@ -11,6 +12,7 @@ class SearchPlacesForm
       relation = relation.place_name_contain(word)
     end
     relation = relation.by_tag(tag_id) if tag_id.present?
+    relation = relation.by_business_hours(business_hours) if business_hours.present?
     relation
   end
 
