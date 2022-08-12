@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_23_162839) do
+ActiveRecord::Schema.define(version: 2022_08_12_145259) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "postgis"
 
   create_table "congestions", force: :cascade do |t|
     t.bigint "place_id", null: false
