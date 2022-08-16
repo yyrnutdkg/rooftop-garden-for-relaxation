@@ -69,5 +69,3 @@ gem 'html2slim'
 
 # 地理情報をpostgresqlで扱うためのモジュール
 gem 'activerecord-postgis-adapter'
-
-gem 'jquery-rails'
