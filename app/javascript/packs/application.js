@@ -11,3 +11,8 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+//jquery追加
+require('jquery')
+
+import "./current-location-search"
