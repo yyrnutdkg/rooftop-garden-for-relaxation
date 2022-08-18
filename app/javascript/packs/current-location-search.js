@@ -1,30 +1,22 @@
 document.addEventListener('turbolinks:load', () => {
+  document.getElementById('btn-current-place').style.visibility = 'hidden'
   const currentLocationSearchButtun = document.getElementById('cur-loc-search')
-  currentLocationSearchButtun.addEventListener('click', ()=>{
+  currentLocationSearchButtun.addEventListener('click', (e)=>{
+    if(!navigator.geolocation) {
+      alert('Geolocation is not supported by your browser');
+   } else {
     navigator.geolocation.getCurrentPosition(success,fail);
-    //alert('test')
+   }
   });
 })
-
-
 
 function success(pos){
   const lat = pos.coords.latitude;
   const lng = pos.coords.longitude;
-
-  $.ajax({
-    url: "/places/index",
-    type: "GET",
-    data: {
-      q: {
-        latitude: lat,
-        longitude: lng
-      }
-    },
-    error: function(data){
-      alert("現在地の取得に失敗しました");
-    }
-  });
+  document.getElementById('q_latitude').value = lat;
+  document.getElementById('q_longitude').value = lng;
+  document.getElementById('cur-loc-search').style.visibility = 'hidden'
+  document.getElementById('btn-current-place').style.visibility = 'visible'
 }
 
 function fail(pos){
