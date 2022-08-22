@@ -7,3 +7,5 @@ tbody
     div = place.name
     - place.tags.each do |tag|
       div = tag.name
+.footer
+ = paginate(@places)
