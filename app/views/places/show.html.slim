@@ -1,2 +1,22 @@
 h1 Places#show
 p Find me in app/views/places/show.html.slim
+
+div.image-slider
+div.place-content
+  = @place.id
+  = @place.name
+  = @place.fee
+  = @place.start_time
+  = @place.end_time
+  = @place.access
+  - @place.congestions.each do | congestion |
+    = congestion.rate
+div.event-content
+  - @place.events.each do | event |
+    = event.title
+    = event.description
+    = event.start_time
+    = event.end_time
+div.category-tag
+  - @place.tags.each do | tag |
+   = tag.name

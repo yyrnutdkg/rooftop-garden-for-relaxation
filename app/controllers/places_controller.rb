@@ -4,7 +4,9 @@ class PlacesController < ApplicationController
     @places = @search_places_form.search.order(id: :desc).page(params[:page])
   end
 
-  def show; end
+  def show
+    @place = Place.includes(:congestions, :events, :stores, :tags).find(params[:id])
+  end
 
   private
 
