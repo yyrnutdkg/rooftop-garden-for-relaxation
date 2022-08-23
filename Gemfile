@@ -72,3 +72,6 @@ gem 'activerecord-postgis-adapter'
 
 # pagenation
 gem 'kaminari'
+
+# translation
+gem 'rails-i18n'
