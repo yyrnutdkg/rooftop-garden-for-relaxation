@@ -78,5 +78,3 @@ gem 'rails-i18n'
 
 # icon
 gem 'font-awesome-rails'
-
-gem 'bootstrap'
