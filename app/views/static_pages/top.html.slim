@@ -2,12 +2,48 @@ h1 StaticPages#top
 p Find me in app/views/static_pages/top.html.slim
 p toppage
 
-= form_with model: @search_places_form, scope: :q, url: places_path, method: :get do |f|
-  = f.search_field :name, {place_holder: '屋上庭園名'}
-  = f.submit '検索', class: %w[btn btn-default btn-flat]
 
-button#cur-loc-search 現在地を取得する
-= form_with model: @search_places_form, scope: :q, url: places_path, id: %w[search-current-place-form], method: :get do |f|
-  = f.hidden_field :latitude
-  = f.hidden_field :longitude
-  = f.submit '現在地から検索する', id: %w[btn-current-place], visibility: 'hidden'
+
+div.background-image.search-section.bg-success.container-fluid.top-search-section
+  div.top-image-text-area
+  div.top-image-search-section.container-fluid
+    div.row
+      div.search-section-left.col-xs-12.col-md-4
+      div.search-seciton-right.col-xs-12.col-md-8.text-sm-center
+        = form_with model: @search_places_form, scope: :q, url: places_path, method: :get, html: { class: 'm-2 ' } do |f|
+          div.input-group
+            = f.search_field :name, { placeholder: '例：東京', class: 'form-control'}
+            div.input-group-btn
+              = button_tag type: 'submit', class: 'btn btn-primary' do
+                i.fa-solid.fa-magnifying-glass
+        ul.borderbox-pale-yellow.list-unstyled.w-100
+          = link_to search_detail_path, { class: 'text-center fw-bold text-decoration-none link-dark'} do
+            li.m-2.position-relative
+              div
+                |もっと詳しく検索する!
+              div
+                i.fa-solid.fa-chevron-right.position-absolute.top-50.end-0.translate-middle-y
+
+    div.search-section-bottom.row.justify-content-end
+      div.search-section-bottom-left.m-2.col-md-4.text-center
+        button.btn.btn-primary#cur-loc-search
+          i.fa-solid.fa-location-arrow
+          | 現在地を取得する
+      div.search-section-bottom-right.m-2.col-md-4.text-center
+        = form_with model: @search_places_form, scope: :q, url: places_path, id: %w[search-current-place-form], method: :get do |f|
+          = f.hidden_field :latitude
+          = f.hidden_field :longitude
+          = button_tag type: 'submit', class: 'btn btn-primary', id: 'btn-current-place'  do
+            i.fa-solid.fa-magnifying-glass-location
+            | 現在地から検索する
+
+div
+  p できること
+div.container-fluid.content-intro
+  div.row
+    div.intro-first.col-md-4
+      p 説明テキスト1
+    div.intro-second.col-md-4
+      p 説明テキスト2
+    div.intro-third.col-md-4
+      p 説明テキスト3

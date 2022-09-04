@@ -76,5 +76,5 @@ gem 'kaminari'
 # translation
 gem 'rails-i18n'
 
-# icon
-gem 'font-awesome-rails'
+# Model
+gem 'enum_help'

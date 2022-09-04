@@ -1,7 +1,22 @@
-h1 StaticPages#search_detail
-
-
-= form_with model: @search_places_form, scope: :q, url: places_path, method: :get do |f|
-  = f.select :tag_id, Tag.pluck(:name, :id), {include_blank:'カテゴリ'}
-  = f.time_field :business_hours
-  = f.submit '検索'
+div.search-detail-view.d-flex.align-items-center
+  div.search-detail.container
+    div.search-detail-title.text-white.d-flex.justify-content-center.m-4
+      h1 詳細検索
+    div.d-flex.justify-content-center
+      = form_with model: @search_places_form, scope: :q, url: places_path, method: :get do |f|
+        div
+         = f.label :name, '場所名'
+        div
+          = f.search_field :name, { placeholder: '例：東京'}
+        div
+          = f.label :tag_id, 'カテゴリ'
+        div
+          = f.select :tag_id, Tag.pluck(:name, :id), {include_blank:'選択してください'}
+        div
+          = f.label :business_hours, '空いている時間'
+        div
+          = f.time_field :business_hours
+        div.submit
+          = button_tag type: 'submit', class: 'btn btn-primary' do
+            i.fa-solid.fa-magnifying-glass
+            | 検索する

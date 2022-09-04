@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+@import "toppage";
+@import "search_detail";
+@import "place/index";
+@import "place/show";
+
+.main-background {
+  background-color: #ebe9dd;
+}
+
+body{
+  margin: 0px ;
+}

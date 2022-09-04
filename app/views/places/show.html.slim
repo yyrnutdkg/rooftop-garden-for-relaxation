@@ -1,22 +1,103 @@
 h1 Places#show
 p Find me in app/views/places/show.html.slim
 
-div.image-slider
-div.place-content
-  = @place.id
-  = @place.name
-  = @place.fee
-  = @place.start_time
-  = @place.end_time
-  = @place.access
-  - @place.congestions.each do | congestion |
-    = congestion.rate
-div.event-content
-  - @place.events.each do | event |
-    = event.title
-    = event.description
-    = event.start_time
-    = event.end_time
+div.place-detail-main.main-background
+  div.place-name
+    = @place.name
+
+  div.tag-list
+  div.place-info.bg-white.border.container
+    div.row
+      div.image-slider.col-md-5.bg-success
+      div.place-content.col-md-7
+        div.horizontal-table
+          table.place-column
+            tr
+              th
+                | 営業時間
+              td
+                = l @place.start_time, format: :work_time
+                | 〜
+                = l @place.end_time, format: :work_time
+            tr
+              th
+                = Place.human_attribute_name(:fee)
+              td
+                = "#{@place.fee}円"
+            tr
+              th
+                | これからの天気
+              td
+                | 準備中
+            tr
+              th
+                | 混雑度
+              td
+                | 準備中
+            tr
+              th
+                = Place.human_attribute_name(:access)
+              td
+                = @place.access
+  div.store-content.container
+    div.row
+      div.event-main-title
+        h2
+          | 店舗情報
+      div.store-horizontal-table
+        table.store-column.bg-white
+          tr
+            th
+              = Store.human_attribute_name(:store_type)
+            th
+              = Store.human_attribute_name(:title)
+            th
+              = Store.human_attribute_name(:description)
+            th
+              | 営業時間
+          - @place.stores.each do | store |
+            tr
+              td
+                = store.store_type_i18n
+              td
+                = store.title
+              td
+                = store.description
+              td
+                = l store.start_time, format: :work_time
+                | 〜
+                = l store.end_time, format: :work_time
+  div.event-content.container
+    div.row
+      div.event-main-title
+        h2 イベント情報
+      div.event-horizontal-table
+        table.event-column.bg-white
+          tr
+            th
+              = Event.human_attribute_name(:title)
+            th
+              = Event.human_attribute_name(:description)
+            th
+              | 日程
+
+          - @place.events.each do | event |
+            tr
+              td
+                = event.title
+              td
+                = event.description
+              td
+                = l event.start_time, format: :long
+                | 〜
+                = l event.end_time, format: :long
+
 div.category-tag
   - @place.tags.each do | tag |
-   = tag.name
+    div.tag-header
+      = Tag.human_attribute_name(:name)
+    div.tag-data
+      = tag.name
+div.back-button
+= link_to :back do
+  戻る
