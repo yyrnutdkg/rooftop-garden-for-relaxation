@@ -38,7 +38,7 @@ div.result-main.main-background.container
         - @places.each do |place|
           div.result-card.bg-white.border
             div.place-image
-              = image_tag 'no-image', size: '200x200'
+              = image_tag 'no-image.png', size: '200x200'
             div.place-name
               h2 = place.name
               div.tag-list
@@ -81,7 +81,7 @@ div.result-main.main-background.container
                     li
                       = tag.name
             div.place-image
-              = image_tag 'no-image', size: '200x200'
+              = image_tag 'no-image.png', size: '200x200'
             div.place-info-table
               table.place-info-horizontal-table
                 tr
