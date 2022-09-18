@@ -1,9 +1,110 @@
-h1 Places#index
-p Find me in app/views/places/index.html.slim
+div.result-main.main-background.container
+  div.row
+    div.search-area.col-md-3.d-none.d-md-block
+      div.search-area-form.bg-white.p-4.w-100
+        = form_with model: @search_places_form, scope: :q, url: places_path, method: :get, html: {class: 'd-flex flex-column flex-wrap' } do |f|
+          div
+            = f.label :name, '場所名'
+          div
+            = f.search_field :name, { placeholder: '例：東京', class: 'w-75'}
+          div
+            = f.label :tag_id, 'カテゴリ'
+          div
+            = f.select :tag_id, Tag.pluck(:name, :id), {include_blank:'選択してください'}, {class: 'w-75'}
+          div
+            = f.label :business_hours, '空いている時間'
+          div
+            = f.time_field :business_hours
+          div.submit.m-1
+            = button_tag type: 'submit', class: 'btn btn-primary' do
+              i.fa-solid.fa-magnifying-glass
+              | 検索する
+    div.search-result-area.col-md-9
+      div.search-result-filter
+        - if @place_count > 0
+            div.place-count
+              span.number
+                = @place_count
+              span
+                | 件見つかりました!
+        - else
+            div.place-count
+              p 見つかりませんでした。再度検索してください。
+        div.searchbox.d-md-none.d-flex.justify-content-center.w-100
+          = link_to search_detail_path
+            button.w-100
+              | 検索条件を変更
+      div.result-list-vartical.d-none.d-md-block
+        - @places.each do |place|
+          div.result-card.bg-white.border
+            div.place-image
+              = image_tag 'no-image', size: '200x200'
+            div.place-name
+              h2 = place.name
+              div.tag-list
+                ul
+                  - place.tags.each do |tag|
+                    li
+                      = tag.name
+            div.place-info-table
+              div.vartical-table
+                div.column
+                  div.table-header
+                    | 営業時間
+                  div.table-data
+                    = l place.start_time, format: :work_time
+                    | 〜
+                    = l place.end_time, format: :work_time
+                div.column
+                  div.table-header
+                    = Place.human_attribute_name(:fee)
+                  div.table-data
+                    = "#{place.fee}円"
+                div.column
+                  div.table-header
+                    | 混雑度
+                  div.table-data
+                    | -
+            div.detail-button.d-flex.justify-content-end
+              = link_to place_path(place) do
+                button.btn.btn-primary
+                  | もっと詳しく見てみる!
 
-tbody
-  - @places.each do |place|
-    div = place.id
-    div = place.name
-    - place.tags.each do |tag|
-      div = tag.name
+      div.result-list-horizontal.d-md-none
+        - @places.each do |place|
+          div.result-card.bg-white.border
+            div.place-name
+              h2 = place.name
+              div.tag-list
+                ul
+                  - place.tags.each do |tag|
+                    li
+                      = tag.name
+            div.place-image
+              = image_tag 'no-image', size: '200x200'
+            div.place-info-table
+              table.place-info-horizontal-table
+                tr
+                  th
+                    | 営業時間
+                  td
+                    = l place.start_time, format: :work_time
+                    | 〜
+                    = l place.end_time, format: :work_time
+                tr
+                  th
+                    = Place.human_attribute_name(:fee)
+                  td
+                    = "#{place.fee}円"
+                tr
+                  th
+                    | 混雑度
+                  td
+                    | -
+            div.detail-button.d-flex.justify-content-end
+              = link_to place_path(place) do
+                button.btn.btn-primary
+                  | もっと詳しく見てみる!
+      div.list-pagenation
+        - if @search_flag.present?
+          = paginate @places, theme: 'bootstrap-5'

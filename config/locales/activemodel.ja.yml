@@ -1,0 +1,5 @@
+ja:
+  activemodel:
+    attributes:
+      search_places_form:
+        tag_id: 'カテゴリ'

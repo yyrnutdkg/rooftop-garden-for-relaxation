@@ -1,2 +1,111 @@
-h1 Places#show
-p Find me in app/views/places/show.html.slim
+div.place-detail-main.main-background
+  div.place-name.p-3.d-flex.flex-row
+    h2 = @place.name
+    div.map-link.m-2
+       = link_to @place.map_link do
+        i.fa-solid.fa-map-location-dot.fa-lg
+
+  div.tag-list
+    ul
+      - @place.tags.each do |tag|
+        li
+          = tag.name
+  div.place-info.container
+    div.row
+      div.image-slider.col-md-5
+        = image_tag 'no-image', size: '200x200'
+      div.place-content.col-md-7.bg-white
+        div.horizontal-table
+          table.place-column
+            tr
+              th
+                = Place.human_attribute_name(:description)
+              td
+                = @place.description
+            tr
+              th
+                | 営業時間
+              td
+                = l @place.start_time, format: :work_time
+                | 〜
+                = l @place.end_time, format: :work_time
+            tr
+              th
+                = Place.human_attribute_name(:fee)
+              td
+                = "#{@place.fee}円"
+            tr
+              th
+                | 混雑度
+              td
+                | -
+            tr
+              th
+                = Place.human_attribute_name(:access)
+              td
+                = @place.access
+  div.store-content.container.p-3
+    div.row
+      div.event-main-title
+        h3
+          | 店舗情報
+      div.store-horizontal-table
+        - if @place.stores.present?
+          table.store-column.bg-white
+            tr
+              th
+                = Store.human_attribute_name(:store_type)
+              th
+                = Store.human_attribute_name(:title)
+              th
+                = Store.human_attribute_name(:description)
+              th
+                | 営業時間
+            - @place.stores.each do | store |
+              tr
+                td
+                  = store.store_type_i18n
+                td
+                  = store.title
+                td
+                  = store.description
+                td
+                  = l store.start_time, format: :work_time
+                  | 〜
+                  = l store.end_time, format: :work_time
+        - else
+          div.bg-white
+            p.p-2 店舗情報はありません。
+
+  div.event-content.container.p-3
+    div.row
+      div.event-main-title
+        h3 イベント情報
+      div.event-horizontal-table
+        - if @place.events.present?
+          table.event-column.bg-white
+            tr
+              th
+                = Event.human_attribute_name(:title)
+              th
+                = Event.human_attribute_name(:description)
+              th
+                | 日程
+            - @place.events.each do | event |
+              tr
+                td
+                  = event.title
+                td
+                  = event.description
+                td
+                  = l event.start_time, format: :period
+                  | 〜
+                  = l event.end_time, format: :period
+        - else
+          div.bg-white
+            p.p-2 イベント情報はありません。
+
+div.back-button.m-2
+  = link_to :back do
+      button.btn.btn-primary
+        | 戻る

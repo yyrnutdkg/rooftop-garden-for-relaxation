@@ -1,0 +1,106 @@
+.place-detail-main{
+  margin: 10px
+}
+
+.tag-list ul{
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.tag-list ul li{
+  border: 1px solid;
+  border-radius: 100vh;
+  padding: 1px 10px;
+  line-height: 24px;
+}
+
+.place-info .row .image-slider{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.place-info .row .place-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.place-content .horizontal-table{
+  width: 100%;
+}
+.place-content .horizontal-table table{
+  width: 100%;
+}
+
+.place-content .horizontal-table .place-column tr{
+  display: flex;
+}
+
+.place-content .horizontal-table .place-column th{
+  border: 1px solid rgba(20,30,30,.2);
+  text-align: left;
+  background: rgba(20,30,30,.1);
+  padding: 5px 8px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 150%;
+  flex: 1;
+  border-bottom: 1px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.place-content .horizontal-table .place-column td{
+  border: 1px solid rgba(20,30,30,.2);
+  background: #fff;
+  padding: 5px 8px;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 1.4rem;
+  line-height: 150%;
+  flex: 4;
+}
+
+.store-content .row .store-horizontal-table{
+  box-sizing: border-box;
+}
+
+.store-content .row .store-horizontal-table table{
+  width: 100%;
+}
+
+.store-content .row .store-horizontal-table table th{
+  background: rgba(20,30,30,.1);
+  border: 1px solid rgba(20,30,30,.2);
+  padding: 5px 8px;
+
+}
+
+.store-content .row .store-horizontal-table table td{
+  border: 1px solid rgba(20,30,30,.2);
+  background: #fff;
+  padding: 5px 8px;
+}
+
+.event-content .row .event-horizontal-table{
+  box-sizing: border-box;
+}
+
+.event-content .row .event-horizontal-table table{
+  width: 100%;
+}
+
+.event-content .row .event-horizontal-table table th{
+  background: rgba(20,30,30,.1);
+  border: 1px solid rgba(20,30,30,.2);
+  padding: 5px 8px;
+}
+
+.event-content .row .event-horizontal-table table td{
+  border: 1px solid rgba(20,30,30,.2);
+  background: #fff;
+  padding: 5px 8px;
+}
