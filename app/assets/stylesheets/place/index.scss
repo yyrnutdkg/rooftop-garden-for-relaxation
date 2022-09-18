@@ -1,3 +1,7 @@
+.list-pagenation{
+  display: flex;
+  justify-content: center;
+}
 .search-result-filter .place-count .number{
   font-weight: bold;
 }
@@ -13,34 +17,30 @@
   padding-top: 32px;
   padding-bottom: 104px;
 }
-// .result-list-vartical {
-//   display: flex;
-//   justify-content: center;
-//   flex-direction: column;
-//   width: 100%;
-//   margin-bottom: 8px;
-// }
+
 .result-list-vartical .result-card{
   display: grid;
-  grid-template-columns: 140px 3fr;
-  grid-template-rows: 1fr 3fr 1frs;
+  grid-template-columns: 200px 3fr;
+  grid-template-rows: 1fr 1fr 40px;
   grid-gap: 10px;
   background-color: #fff;
   width: 100%;
   padding: 16px;
   margin-bottom: 8px;
-  // transition: all .4s;
-  // cursor: pointer;
-  // -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
 }
 
 .result-list-vartical .result-card .place-image{
   grid-column: 1/2;
-  grid-row: 1/4;
+  grid-row: 1/2;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
+.result-list-vartical .result-card .place-image img{
+  width: 100%;
+}
+
 .result-list-vartical .result-card .place-name{
   grid-column: 2/4;
   grid-row: 1/2;
@@ -48,15 +48,25 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 10px;
+  flex-wrap: wrap;
+}
+.result-list-vartical .result-card .place-name h2{
+  width: 100%;
 }
 .result-list-vartical .result-card .place-info-table{
   grid-column: 2/4;
   grid-row: 2/3;
+  width: 100%;
 }
 .result-list-vartical .result-card .detail-button{
   grid-column: 2/4;
   grid-row: 3/4;
+  width: 100%;
 }
+.result-list-vartical .result-card .detail-button button{
+  width: 100%;
+}
+
 .result-list-vartical .result-card .place-info-table .vartical-table{
   display: flex;
   flex-direction: row;
@@ -96,16 +106,11 @@
   padding: 8px 12px;
 }
 
-.result-main .search-area form{
-  //margin: 30px;
-
-}
-.result-main .search-area form .submit{
-  //margin: 30px;
-
-}
-
 //for smartphone and smarter view
+.result-list-horizontal{
+  box-sizing: border-box;
+}
+
 .result-list-horizontal .result-card{
   display: grid;
   grid-template-columns: 140px 3fr;
@@ -115,25 +120,30 @@
   width: 100%;
   padding: 16px;
   margin-bottom: 8px;
-  // transition: all .4s;
-  // cursor: pointer;
-  // -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
 }
 .result-list-horizontal .result-card .place-image{
-  grid-column: 1/2;
-  grid-row: 1/2;
-}
-.result-list-horizontal .result-card .place-name{
-  grid-column: 2/3;
-  grid-row: 1/2;
-}
-.result-list-horizontal .result-card .place-info-table{
   grid-column: 1/3;
   grid-row: 2/3;
 }
-.result-list-horizontal .result-card .detail-button{
+.result-list-horizontal .result-card .place-image{
+  text-align: center;
+}
+
+.result-list-horizontal .result-card .place-name{
+  grid-column: 1/3;
+  grid-row: 1/2;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.result-list-horizontal .result-card .place-info-table{
   grid-column: 1/3;
   grid-row: 3/4;
+}
+.result-list-horizontal .result-card .detail-button{
+  grid-column: 2/3;
+  grid-row: 4/5;
 }
 
 
@@ -164,7 +174,6 @@
   font-size: 1.4rem;
   line-height: 150%;
   flex: 4;
-  //border-bottom: 1px solid transparent;
 }
 
 .search-area-form form{
@@ -174,4 +183,8 @@
 .search-area-form form div{
   box-sizing: content-box;
   width: 100%;
+}
+
+.place-name .tag-list ul{
+  max-width: 150px;
 }

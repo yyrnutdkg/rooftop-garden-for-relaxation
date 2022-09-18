@@ -1,11 +1,7 @@
-h1 StaticPages#top
-p Find me in app/views/static_pages/top.html.slim
-p toppage
-
-
-
-div.background-image.search-section.bg-success.container-fluid.top-search-section
+div.background-image.search-section.bg-success.container-fluid.top-search-section.position-relative
   div.top-image-text-area
+    p.text-span.position-absolute 都会の中にある自然を体感しよう
+    p.titlespan.position-absolute.position-absolute Green-Found
   div.top-image-search-section.container-fluid
     div.row
       div.search-section-left.col-xs-12.col-md-4
@@ -37,13 +33,26 @@ div.background-image.search-section.bg-success.container-fluid.top-search-sectio
             i.fa-solid.fa-magnifying-glass-location
             | 現在地から検索する
 
-div
-  p できること
-div.container-fluid.content-intro
-  div.row
-    div.intro-first.col-md-4
-      p 説明テキスト1
-    div.intro-second.col-md-4
-      p 説明テキスト2
-    div.intro-third.col-md-4
-      p 説明テキスト3
+div.second-main.m-2
+  h2.text-center 3つのポイント
+  div.container.content-intro
+    div.row
+      div.intro-first.col-md-4.border.p-2
+        h3 都会にある隠れ家的な自然
+        div
+          = image_tag 'top-intro-first1.png', size: '200x200'
+        p 高層ビル、高層マンションが立ち並ぶ都会では自然が感じにくい場合が多いかもしれません。
+        p しかし、その高層ビルの屋上に緑豊かな自然を感じられるスポットができ始めています！
+        p ぜひ都会にある「屋上庭園」を一度訪れてほしい！
+      div.intro-second.col-md-4.border.p-2
+        h3 試しに近くの屋上庭園を探そう
+        div
+          = image_tag 'top-intro-first2.png', size: '200x200'
+        p 例えば、現在地から近い屋上庭園を調べることが可能。
+        p 他にも条件から目的にあった屋上庭園を探すことができます。
+      div.intro-third.col-md-4.border.p-2
+        h3 さらなるバージョンアップも
+        div
+          = image_tag 'top-intro-first3.png', size: '200x200'
+        p 今後も通知機能や投稿機能といった屋上庭園を知る・活用するための機能を拡充します。
+        p 仕事の合間、仕事帰りやプライベートの時間に活用してみてください！

@@ -10,8 +10,6 @@
   background-repeat: no-repeat;
   background-size: cover ;
   height: 887px;
-
-
   border: none;
   border-radius: 35px;
   list-style-type: none;
@@ -20,6 +18,11 @@
 
 .borderbox-pale-yellow {
   background-color: #ebe9dd;
+  border: ridge;
+  border-radius: 2px;
+}
+.borderbox-pale-green{
+  background-color: #a8c088;
   border: ridge;
   border-radius: 2px;
 }
@@ -32,3 +35,73 @@
   right: 20px;
   bottom: 100px;
 }
+
+.content-intro .row .intro-first{
+  word-break: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.content-intro .row .intro-first p{
+  text-align: left;
+}
+
+.content-intro .row .intro-second{
+  word-break: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.content-intro .row .intro-third{
+  word-break: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+
+@media screen and (min-width: 991.99px) {
+.text-span{
+  color: #f8fbf8;
+  font-size: 2.0rem;
+  bottom: 50%;
+  right: 60%;
+}
+.titlespan{
+  color: #f8fbf8;
+  font-weight: bold;
+  font-size: 2.5rem;
+  bottom: 40%;
+  right: 60%;
+}
+}
+
+@media screen and (max-width: 991.98px) {
+  .top-image-text-area{
+    display: block;
+    position: relative;
+    height: 50%;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+  .text-span{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #f8fbf8;
+    font-size: 2.0rem;
+  }
+  .titlespan{
+    color: #f8fbf8;
+    top: 80%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+ }

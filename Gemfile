@@ -49,6 +49,7 @@ group :development do
   gem 'spring'
 
   gem 'annotate'
+  gem 'pry-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -72,6 +73,7 @@ gem 'activerecord-postgis-adapter'
 
 # pagenation
 gem 'kaminari'
+gem 'bootstrap5-kaminari-views'
 
 # translation
 gem 'rails-i18n'

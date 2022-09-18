@@ -21,11 +21,15 @@ div.result-main.main-background.container
               | 検索する
     div.search-result-area.col-md-9
       div.search-result-filter
-        div.place-count
-          span.number
-            = @place_count
-          span
-            | 件見つかりました!
+        - if @place_count > 0
+            div.place-count
+              span.number
+                = @place_count
+              span
+                | 件見つかりました!
+        - else
+            div.place-count
+              p 見つかりませんでした。再度検索してください。
         div.searchbox.d-md-none.d-flex.justify-content-center.w-100
           = link_to search_detail_path
             button.w-100
@@ -34,8 +38,14 @@ div.result-main.main-background.container
         - @places.each do |place|
           div.result-card.bg-white.border
             div.place-image
+              = image_tag 'no-image', size: '200x200'
             div.place-name
-              = place.name
+              h2 = place.name
+              div.tag-list
+                ul
+                  - place.tags.each do |tag|
+                    li
+                      = tag.name
             div.place-info-table
               div.vartical-table
                 div.column
@@ -52,14 +62,9 @@ div.result-main.main-background.container
                     = "#{place.fee}円"
                 div.column
                   div.table-header
-                    | これからの天気
-                  div.table-data
-                    | 準備中
-                div.column
-                  div.table-header
                     | 混雑度
                   div.table-data
-                    | 準備中
+                    | -
             div.detail-button.d-flex.justify-content-end
               = link_to place_path(place) do
                 button.btn.btn-primary
@@ -68,9 +73,15 @@ div.result-main.main-background.container
       div.result-list-horizontal.d-md-none
         - @places.each do |place|
           div.result-card.bg-white.border
-            div.place-image
             div.place-name
-              = place.name
+              h2 = place.name
+              div.tag-list
+                ul
+                  - place.tags.each do |tag|
+                    li
+                      = tag.name
+            div.place-image
+              = image_tag 'no-image', size: '200x200'
             div.place-info-table
               table.place-info-horizontal-table
                 tr
@@ -87,17 +98,13 @@ div.result-main.main-background.container
                     = "#{place.fee}円"
                 tr
                   th
-                    | これからの天気
-                  td
-                    | 準備中
-                tr
-                  th
                     | 混雑度
                   td
-                    | 準備中
+                    | -
             div.detail-button.d-flex.justify-content-end
               = link_to place_path(place) do
                 button.btn.btn-primary
                   | もっと詳しく見てみる!
       div.list-pagenation
-         = paginate(@places)
+        - if @search_flag.present?
+          = paginate @places, theme: 'bootstrap-5'
