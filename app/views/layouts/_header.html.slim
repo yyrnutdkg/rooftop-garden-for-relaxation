@@ -6,4 +6,4 @@ header
       = form_with model: @search_places_form, scope: :q, url: places_path, method: :get, html: { class: 'd-flex' } do |f|
         = f.search_field :name, { placeholder: '例：東京', class: 'form-control me-2'}
         = button_tag type: 'submit', class: 'btn btn-outline-primary ' do
-          i.fa-solid.fa-magnifying-glass
+          i.fas.fa-search

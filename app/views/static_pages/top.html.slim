@@ -11,26 +11,26 @@ div.background-image.search-section.bg-success.container-fluid.top-search-sectio
             = f.search_field :name, { placeholder: '例：東京', class: 'form-control'}
             div.input-group-btn
               = button_tag type: 'submit', class: 'btn btn-primary' do
-                i.fa-solid.fa-magnifying-glass
+                i.fas.fa-search
         ul.borderbox-pale-yellow.list-unstyled.w-100
           = link_to search_detail_path, { class: 'text-center fw-bold text-decoration-none link-dark'} do
             li.m-2.position-relative
               div
                 |もっと詳しく検索する!
               div
-                i.fa-solid.fa-chevron-right.position-absolute.top-50.end-0.translate-middle-y
+                i.fas.fa-chevron-right.position-absolute.top-50.end-0.translate-middle-y
 
     div.search-section-bottom.row.justify-content-end
       div.search-section-bottom-left.m-2.col-md-4.text-center
         button.btn.btn-primary#cur-loc-search
-          i.fa-solid.fa-location-arrow
+          i.fas.fa-location-arrow
           | 現在地を取得する
       div.search-section-bottom-right.m-2.col-md-4.text-center
         = form_with model: @search_places_form, scope: :q, url: places_path, id: %w[search-current-place-form], method: :get do |f|
           = f.hidden_field :latitude
           = f.hidden_field :longitude
           = button_tag type: 'submit', class: 'btn btn-primary', id: 'btn-current-place'  do
-            i.fa-solid.fa-magnifying-glass-location
+            i.fas.fa-search-location
             | 現在地から検索する
 
 div.second-main.m-2
