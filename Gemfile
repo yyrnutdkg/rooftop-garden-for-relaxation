@@ -35,6 +35,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rubocop', require: false
   gem 'rubocop-rails', require: false
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -48,7 +49,34 @@ group :development do
   gem 'spring'
 
   gem 'annotate'
+  gem 'pry-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Countermeasure for errors caused by net-smtp being an external gem
+gem 'net-smtp'
+
+group :test do
+  gem 'capybara'
+  gem 'faker'
+  gem 'webdrivers'
+end
+
+
+gem 'slim-rails'
+gem 'html2slim'
+
+# 地理情報をpostgresqlで扱うためのモジュール
+gem 'activerecord-postgis-adapter'
+
+# pagenation
+gem 'kaminari'
+gem 'bootstrap5-kaminari-views'
+
+# translation
+gem 'rails-i18n'
+
+# Model
+gem 'enum_help'

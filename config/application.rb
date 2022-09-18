@@ -34,5 +34,22 @@ module RooftopGardenForRelaxation
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.generators do |g|
+      g.skip_routes true
+      g.assets false
+      g.helper false
+      g.test_framework false
+    end
+
+    config.time_zone = 'Tokyo'
+    config.active_record.default_timezone = :local
+
+    # アプリケーションが対応している言語のホワイトリスト
+    config.i18n.available_locales = %i[ja en]
+    # デフォルトの言語設定
+    config.i18n.default_locale = :ja
+    # 言語ファイル階層ごとに設定するための記述
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
   end
 end

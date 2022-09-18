@@ -1,0 +1,21 @@
+ja:
+  activerecord:
+    attributes:
+      place:
+        name: '名称'
+        description: '詳細'
+        fee: '入場料'
+        start_time: '営業開始時間'
+        end_time: '営業終了時間'
+        access: 'アクセス'
+      store:
+        store_type: '分類'
+        title: '名称'
+        description: 'ストア詳細'
+        start_time: '営業開始時間'
+        end_time: '営業終了時間'
+      event:
+        title: 'イベント名'
+        description: 'イベント詳細'
+        start_time: '開始日'
+        end_time: '終了日'

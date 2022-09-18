@@ -1,0 +1,6 @@
+ja:
+  enums:
+    store:
+      store_type:
+        inside: '庭園内'
+        outside: '庭園周辺'
