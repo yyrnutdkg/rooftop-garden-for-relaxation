@@ -57,6 +57,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Countermeasure for errors caused by net-smtp being an external gem
 gem 'net-smtp'
+gem 'net-imap'
+gem 'net-pop'
 
 group :test do
   gem 'capybara'
