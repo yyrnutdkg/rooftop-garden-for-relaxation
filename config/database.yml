@@ -82,7 +82,9 @@ test:
 #
 production:
   <<: *default
-  database: rooftop_garden_for_relaxation_production
-  username: rooftop_garden_for_relaxation
-  password: <%= ENV['ROOFTOP_GARDEN_FOR_RELAXATION_DATABASE_PASSWORD'] %>
-  url: <%= ENV['DATABASE_URL'].sub(/^postgres/, "postgis") %>
+  <% if Rails.env.production? %>
+    database: rooftop_garden_for_relaxation_production
+    username: rooftop_garden_for_relaxation
+    password: <%= ENV['ROOFTOP_GARDEN_FOR_RELAXATION_DATABASE_PASSWORD'] %>
+    url: <%= ENV['DATABASE_URL'].sub(/^postgres/, "postgis") %>
+  <% end %>
