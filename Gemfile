@@ -82,3 +82,6 @@ gem 'rails-i18n'
 
 # Model
 gem 'enum_help'
+
+#login
+gem 'sorcery'
