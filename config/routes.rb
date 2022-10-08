@@ -4,11 +4,6 @@ Rails.application.routes.draw do
   root to:'static_pages#top'
   get 'search_detail', to: 'static_pages#detail'
 
-  resources :users, only: %i[new create]
-  get '/login', to: 'user_sessions#new'
-  post '/login', to: 'user_sessions#create'
-  delete '/logout', to: 'user_sessions#destroy'
-
   resources :places, only: %i[index show]
   resources :static_pages, only: %i[show]
 
