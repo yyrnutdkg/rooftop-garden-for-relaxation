@@ -17,10 +17,16 @@ RSpec.describe "UserLogin", type: :system do
       fill_in 'Email', with: user.email
       fill_in 'Password', with: 'password'
       click_button 'ログイン'
-      expect(page).to have_content('ログインに成功しました。')
+      expect(page).to have_content('ログインに成功しました')
     end
 
     it 'ログアウトに成功する' do
+      visit login_path
+      fill_in 'Email', with: user.email
+      fill_in 'Password', with: 'password'
+      click_button 'ログイン'
+      click_link 'ログアウト'
+      expect(page).to have_content('ログアウトに成功しました')
     end
   end
 end
