@@ -1,5 +1,8 @@
 header
+
   nav.navbar.bg-light.border
+    = link_to logout_path, method: :delete, class: 'btn btn-outline-primary' do
+        | ログアウト
     div.container-fluid
       = link_to root_path, class: 'btn btn-outline-primary' do
          | Top
