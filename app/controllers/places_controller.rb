@@ -14,6 +14,7 @@ class PlacesController < ApplicationController
 
   def show
     @place = Place.includes(:congestions, :events, :stores, :tags).find(params[:id])
+    @post = Post.new
   end
 
   private

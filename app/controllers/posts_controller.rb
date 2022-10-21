@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :require_login
+
   def create
     @comment = current_user.posts.build(post_params)
     @comment.save

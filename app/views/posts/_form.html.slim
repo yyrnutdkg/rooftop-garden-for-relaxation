@@ -1,0 +1,8 @@
+div
+  div
+    = form_with model: post, url: [place, post] do |form|
+      = form.label :title
+      = form.text_field :title
+      = form.label :description
+      = form.text_field :description
+      = form.submit (t 'defaults.post_register')

@@ -104,6 +104,8 @@ div.place-detail-main.main-background
         - else
           div.bg-white
             p.p-2 イベント情報はありません。
+  div
+    = render 'posts/form', { place: @place, post: @post}
 
 div.back-button.m-2
   = link_to :back do
