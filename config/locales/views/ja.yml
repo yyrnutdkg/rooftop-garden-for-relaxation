@@ -4,6 +4,14 @@ ja:
     login_failure: 'ログインに失敗しました。'
     logout_success: 'ログアウトに成功しました。'
     post_register: '投稿する'
+    message:
+      require_login: 'ログインしてください'
+      created: "%{item}を作成しました。"
+      not_created: "%{item}を作成できませんでした。"
+      updated: "%{item}を更新しました。"
+      not_updated: "%{item}を更新できませんでした。"
+      deleted: "%{item}を削除しました"
+      delete_confirm: '削除しますか？'
   pagination:
     first: <i class="fas fa-angle-double-left"></i>
     last: <i class="fas fa-angle-double-right"></i>
