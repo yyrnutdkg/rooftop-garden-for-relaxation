@@ -24,4 +24,16 @@ class User < ApplicationRecord
   def delete_post(post)
     posts.destroy(post)
   end
+
+  def bookmark(place)
+    bookmark_places << place
+  end
+
+  def unbookmark(place)
+    bookmark_places.destroy(place)
+  end
+
+  def bookmark?(place)
+    bookmark_places.include?(place)
+  end
 end

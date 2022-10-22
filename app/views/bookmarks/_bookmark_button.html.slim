@@ -1,0 +1,4 @@
+- if current_user.bookmark?(place)
+  = render 'bookmarks/unbookmark', { place: place }
+- else
+  = render 'bookmarks/bookmark', { place: place }
