@@ -4,8 +4,9 @@ div.place-detail-main.main-background
     div.map-link.m-2
        = link_to @place.map_link do
         i.fas.fa-map-marked-alt.fa-lg
-       = render 'bookmarks/bookmark_button', { place: @place }
-
+    div
+      = render 'bookmarks/bookmark_button', { place: @place }
+      p いいね!
   div.tag-list
     ul
       - @place.tags.each do |tag|

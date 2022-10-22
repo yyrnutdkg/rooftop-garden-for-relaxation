@@ -1,2 +1,2 @@
-= link_to bookmarks_path(place_id: place.id), method: :post do
-  i.fas.fa-heart
+= link_to bookmarks_path(place_id: place.id), id: "js-bookmark-button-for-place-#{place.id}", method: :post, remote: true do
+  i.far.fa-heart
