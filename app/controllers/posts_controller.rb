@@ -2,8 +2,9 @@ class PostsController < ApplicationController
   before_action :require_login
 
   def create
-    @comment = current_user.posts.build(post_params)
-    @comment.save
+    @post = Post.new(post_params)
+    @post.save
+    current_user.own_post(@post)
   end
 
   def destroy
