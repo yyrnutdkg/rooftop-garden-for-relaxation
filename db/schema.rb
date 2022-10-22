@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_30_163458) do
+ActiveRecord::Schema.define(version: 2022_10_22_103000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,6 +63,25 @@ ActiveRecord::Schema.define(version: 2022_09_30_163458) do
     t.geography "lonlat", limit: {:srid=>4326, :type=>"st_point", :geographic=>true}
   end
 
+  create_table "post_users", force: :cascade do |t|
+    t.integer "post_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["post_id"], name: "index_post_users_on_post_id"
+    t.index ["user_id"], name: "index_post_users_on_user_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.bigint "place_id", null: false
+    t.integer "type"
+    t.text "title"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["place_id"], name: "index_posts_on_place_id"
+  end
+
   create_table "stores", force: :cascade do |t|
     t.bigint "place_id", null: false
     t.integer "store_type", default: 0, null: false
@@ -96,5 +115,8 @@ ActiveRecord::Schema.define(version: 2022_09_30_163458) do
   add_foreign_key "events", "places"
   add_foreign_key "place_tags", "places"
   add_foreign_key "place_tags", "tags"
+  add_foreign_key "post_users", "posts"
+  add_foreign_key "post_users", "users"
+  add_foreign_key "posts", "places"
   add_foreign_key "stores", "places"
 end

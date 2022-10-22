@@ -1,0 +1,11 @@
+tr class="post-#{post.id}"
+  td
+    = post.title
+  td
+    = post.description
+  - post.users.each do | user |
+    - if current_user.own?(user)
+      td
+        button 編集
+        = link_to place_post_path(post.place_id, post), method: :delete do
+          | 削除
