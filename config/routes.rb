@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :places, only: %i[index show] do
     resources :posts, only: %i[create destroy]
   end
+  resources :bookmarks, only: %i[create destroy]
   resources :static_pages, only: %i[show]
 
 end
