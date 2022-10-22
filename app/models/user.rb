@@ -11,7 +11,7 @@ class User < ApplicationRecord
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
 
   def own?(object)
-    id == object.user_id
+    id == object.id
   end
 
   def own_post(post)
