@@ -8,8 +8,9 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @comment = current_user.posts.find_by(id: params[:id])
-    @comment.destroy!
+    @post = current_user.posts.find_by(id: params[:id])
+    current_user.delete_post(@post)
+    @post.destroy!
   end
 
   private

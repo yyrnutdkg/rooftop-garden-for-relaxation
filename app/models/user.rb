@@ -17,4 +17,8 @@ class User < ApplicationRecord
   def own_post(post)
     posts << post
   end
+
+  def delete_post(post)
+    posts.destroy(post)
+  end
 end

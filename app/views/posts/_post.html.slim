@@ -7,3 +7,5 @@ tr class="post-#{post.id}"
     - if current_user.own?(user)
       td
         button 編集
+        = link_to place_post_path(post.place_id, post), method: :delete do
+          | 削除
