@@ -3,6 +3,8 @@ class Place < ApplicationRecord
   has_many :events
   has_many :place_tags
   has_many :tags, through: :place_tags
+  has_many :place_users, dependent: :destroy
+  has_many :users, through: :place_users
   has_many :posts, dependent: :destroy
   has_many :stores
 

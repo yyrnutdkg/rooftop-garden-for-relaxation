@@ -1,6 +1,9 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
 
+  has_many :place_users, dependent: :destroy
+  has_many :bookmark_places, through: :place_users, source: :place
+
   has_many :post_users
   has_many :posts, through: :post_users
 
@@ -20,5 +23,17 @@ class User < ApplicationRecord
 
   def delete_post(post)
     posts.destroy(post)
+  end
+
+  def bookmark(place)
+    bookmark_places << place
+  end
+
+  def unbookmark(place)
+    bookmark_places.destroy(place)
+  end
+
+  def bookmark?(place)
+    bookmark_places.include?(place)
   end
 end
