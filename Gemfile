@@ -86,3 +86,8 @@ gem 'enum_help'
 
 #login
 gem 'sorcery'
+
+# user avator image
+gem 'carrierwave', '~> 2.0'
+
+gem "mini_magick"
