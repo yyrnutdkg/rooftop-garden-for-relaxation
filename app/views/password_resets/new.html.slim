@@ -1,0 +1,10 @@
+div.container
+  div.row
+    div.col-md-10.offset-md-1.col-lg-8.offset-lg-2
+      h1= t'.title'
+
+      = form_with url: password_resets_path, local: true, method: :post do |form|
+        div.form-group
+          = form.label :email, User.human_attribute_name(:email)
+          = form.text_field :email
+          = form.submit (t'defaults.send'), class: 'btn btn-primary'
