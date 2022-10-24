@@ -18,3 +18,4 @@ ActiveStorage.start()
 //jquery追加
 require('jquery');
 import "./current-location-search"
+import "./image-preview"
