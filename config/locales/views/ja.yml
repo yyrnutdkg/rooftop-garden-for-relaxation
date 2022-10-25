@@ -23,6 +23,18 @@ ja:
       title: 'パスワードリセット'
     update:
       password_changed: 'パスワードを変更しました'
+  profiles:
+    show:
+      title: 'マイページ'
+      mypage_edit: '編集'
+      password_reset: '変更する'
+      information: '登録情報'
+      password_hide: '****'
+      favorite-place-list: 'お気に入り'
+      favorite-list-not-exsist: 'お気に入りはまだありません。'
+      go-search-detail: 'お気に入りの場所を探してみる！'
+      detail-info: 'の詳細はコチラ'
+
   pagination:
     first: <i class="fas fa-angle-double-left"></i>
     last: <i class="fas fa-angle-double-right"></i>
