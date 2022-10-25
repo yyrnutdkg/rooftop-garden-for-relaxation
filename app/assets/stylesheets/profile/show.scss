@@ -1,0 +1,19 @@
+.user-card .user-info{
+  padding: 1.25rem;
+}
+.user-card p{
+  font-weight: 200;
+  font-size: 1.4rem;
+}
+.favorite-cards p{
+  font-weight: 200;
+  font-size: 1.4rem;
+}
+
+.favorite-cards .favorite-card{
+  transition:transform 0.3s;
+}
+
+.favorite-cards .favorite-card:hover{
+  transform:scale(1.05);
+}
