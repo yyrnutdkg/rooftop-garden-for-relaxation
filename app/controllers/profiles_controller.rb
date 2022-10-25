@@ -1,6 +1,8 @@
 class ProfilesController < ApplicationController
-  before_action :set_user, only: [:edit, :update]
-  def show; end
+  before_action :set_user
+  def show
+    @bookmarks = current_user.bookmark_places
+  end
 
   def edit; end
 

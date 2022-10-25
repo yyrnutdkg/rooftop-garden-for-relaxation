@@ -1,3 +1,56 @@
-h1 Profiles#show
-p Find me in app/views/profiles/show.html.slim
-= link_to '編集', edit_profile_path
+div.container-fluid.main-background
+  div.row
+    div.d-flex.justify-content-center.align-items-center.m-4
+      h2 = (t '.title')
+
+    div.user-card.col-md-5
+      div.text-center.m-4
+        h3 = (t '.information')
+      div.user-info.bg-white.border.m-2
+        div.d-flex.justify-content-between.m-2.align-items-center
+          = image_tag current_user.icon.url, size: '80x80', class: 'mr-2 rounded-circle border'
+          p.text-center.align-item-center = current_user.name
+          = link_to edit_profile_path do
+            button.btn.btn-primary.me-2
+              =  (t '.mypage_edit')
+        div.d-flex.justify-content-between.p-2
+          div
+            =  t (User.human_attribute_name(:email))
+          div.text-center
+            = current_user.email
+        div.d-flex.justify-content-between.p-2
+          div
+            = t (User.human_attribute_name(:user_role))
+          div
+            = current_user.user_role
+        div.d-flex.justify-content-between.align-items-center.p-2
+          div.text-center = t (User.human_attribute_name(:password))
+          div.text-center = (t '.password_hide')
+          = link_to new_password_reset_path do
+            button.btn.btn-primary
+              =  (t '.password_reset')
+    div.col-md-7.favorite-lists
+      div.text-center.m-4
+        h3 = (t '.favorite-place-list')
+      div.favorite-cards.bg-white.p-3.m-2
+        - if @bookmarks.present?
+          - @bookmarks.each do |place|
+            div.favorite-card.border.p-3.mb-3
+              div.text-center.mb-2
+                h4 = place.name
+              div.d-flex.justify-content-between.m-2
+                p 地区
+                p 最寄り駅
+                = render 'bookmarks/bookmark_button', { place: place }
+              div.text-end
+                = link_to place_path(place) do
+                  = place.name + (t '.detail-info' )
+                  i.fas.fa-caret-right
+
+        - else
+          div.p-2
+            div.text-center.mb-3
+              = (t '.favorite-list-not-exsist')
+            div.text-center
+              = link_to search_detail_path do
+                = (t '.go-search-detail')
