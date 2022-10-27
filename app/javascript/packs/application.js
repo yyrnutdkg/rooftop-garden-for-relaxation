@@ -20,3 +20,4 @@ require('jquery');
 import "./current-location-search"
 import "./image-preview"
 import "./collapse-post"
+import "./collapse-post-description"
