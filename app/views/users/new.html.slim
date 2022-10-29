@@ -1,11 +1,20 @@
-h1 Users#new
-p Find me in app/views/users/new.html.slim
-
-= form_with model: @user, local: true do |f|
-  = f.label :name
-  = f.text_field :name
-  = f.label :email
-  = f.text_field :email
-  = f.label :password
-  = f.text_field :password
-  = f.submit '登録'
+div.container
+  div.row
+    div.col-md-10.p-2
+      div.new-user.title.text-center
+        h2 = t('.title')
+      = form_with model: @user, local: true do |f|
+        div.form-main
+          div.form-group.p-2
+            = f.label :name, (User.human_attribute_name(:name))
+            = f.text_field :name, class: 'form-control'
+          div.form-group.p-2
+            = f.label :email, (User.human_attribute_name(:email))
+            = f.text_field :email, class: 'form-control'
+          div.form-group.p-2
+            = f.label :password, (User.human_attribute_name(:password))
+            = f.text_field :password, class: 'form-control'
+          div.actions.p-2.text-center
+            = f.submit  t('defaults.register'), class: 'btn btn-primary'
+      div.to-login.p-2.text-center
+        = link_to t('.login'), login_path

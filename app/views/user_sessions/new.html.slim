@@ -1,12 +1,19 @@
-h1 UserSessions#new
-p Find me in app/views/user_sessions/new.html.slim
-
 div.container
   div.row
-    div
+    div.col-md-10.p-2
+      div.login-title.text-center
+        h2 =  (t '.title')
       = form_with local: true do |f|
-        = f.label :email
-        = f.text_field :email
-        = f.label :password
-        = f.password_field :password
-        = f.submit 'ログイン'
+        div.form-group.p-2
+          = f.label :email, (User.human_attribute_name(:email))
+          = f.text_field :email, class: 'form-control'
+        div.form-group.p-2
+          = f.label :password, (User.human_attribute_name(:password))
+          = f.password_field :password, class: 'form-control'
+        div.actions.p-2.text-center
+          = f.submit (t 'defaults.login'), class: 'btn btn-primary'
+      div.text-center.d-flex.flex-column.p-2
+        div.to-user-page.p-2
+          = link_to (t '.register_page'), new_user_path
+        div.to-forgot-password.p-2
+          = link_to (t '.forgot_password'), new_password_reset_path
