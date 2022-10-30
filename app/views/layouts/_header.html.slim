@@ -1,12 +1,20 @@
 header
-
-  nav.navbar.bg-light.border
-    = link_to logout_path, method: :delete, class: 'btn btn-outline-primary' do
-        | ログアウト
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light
     div.container-fluid
       = link_to root_path, class: 'btn btn-outline-primary' do
          | Top
-      = form_with model: @search_places_form, scope: :q, url: places_path, method: :get, html: { class: 'd-flex' } do |f|
-        = f.search_field :name, { placeholder: '例：東京', class: 'form-control me-2'}
-        = button_tag type: 'submit', class: 'btn btn-outline-primary ' do
-          i.fas.fa-search
+      div.header-search.ml-auto.d-flex.flex-row
+        = form_with model: @search_places_form, scope: :q, url: places_path, method: :get, html: { class: 'd-flex' } do |f|
+          = f.search_field :name, { placeholder: '例：東京', class: 'form-control'}
+          = button_tag type: 'submit', class: 'btn btn-outline-primary me-2' do
+            i.fas.fa-search
+        div.dropdown
+          a href="#" class="btn btn-outline-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"
+            = t('defaults.mypage')
+          ul.dropdown-menu
+            li.dropdown-item
+              = link_to current_user.name, profile_path, class: 'nav-link'
+            li.dropdown-item
+              = link_to t('defaults.search-detail'), search_detail_path, class: 'nav-link'
+            li.dropdown-item
+              = link_to t('defaults.logout'), logout_path, method: :delete, class: 'nav-link'

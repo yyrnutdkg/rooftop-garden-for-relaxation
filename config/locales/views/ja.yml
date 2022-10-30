@@ -1,5 +1,13 @@
 ja:
   defaults:
+    mypage: 'マイページ'
+    menu: 'メニュー'
+    search-detail: '詳細検索'
+    new-user: 'ユーザ登録'
+    login: 'ログイン'
+    logout: 'ログアウト'
+    mypage: 'マイページ'
+    register: '登録する'
     login_success: 'ログインに成功しました。'
     login_failure: 'ログインに失敗しました。'
     logout_success: 'ログアウトに成功しました。'
@@ -17,6 +25,7 @@ ja:
   password_resets:
     new:
       title: 'パスワード再発行'
+      login: 'ログインページはこちら'
     create:
       password_reset: 'パスワードリセットの手順を送信しました。'
     edit:
@@ -34,6 +43,21 @@ ja:
       favorite-list-not-exsist: 'お気に入りはまだありません。'
       go-search-detail: 'お気に入りの場所を探してみる！'
       detail-info: 'の詳細はコチラ'
+  posts:
+    post_list:
+      see-more: 'もっとみる！'
+    post:
+      posted_date: '投稿日'
+      readmore-post: 'もっと見る'
+  user_sessions:
+    new:
+      title: 'ログイン'
+      register_page: 'ユーザ新規登録はコチラ'
+      forgot_password: 'パスワード再発行はコチラ'
+  users:
+    new:
+      title: 'ユーザ登録'
+      login: 'ログインページはこちら'
 
   pagination:
     first: <i class="fas fa-angle-double-left"></i>
@@ -49,4 +73,5 @@ ja:
       short: '%m/%d %H:%M'
       work_time: '%-H時'
       period: '%Y年%m月%d日(%a) %H時%M分'
+      simple_date: '%Y年%m月%d日'
     pm: '午後'

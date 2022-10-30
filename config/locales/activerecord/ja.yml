@@ -25,3 +25,4 @@ ja:
         user_role: '種別'
         password: 'パスワード'
         icon: 'アイコン画像'
+        password_confirmation: 'パスワード確認'
