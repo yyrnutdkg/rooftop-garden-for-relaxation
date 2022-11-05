@@ -22,8 +22,9 @@ place1 = Place.create!(
   東京メトロ有楽町線「銀座一丁目駅」(9番出口)より徒歩5分
   都営浅草線・東京メトロ日比谷線「東銀座駅」銀座駅方面地下通路経由徒歩2分
   JR「有楽町駅」(中央口・銀座口)より徒歩9分",
-  map_link: "https://goo.gl/maps/RnVYDDudDDxDcZuT9",
-  lonlat: "point(139.76574077546226, 35.67133211499226)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d810.3059703043009!2d139.765722!3d35.671489!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x91fb4ae4762f83be!2z6YqA5bqn5LiJ6LaK!5e0!3m2!1sja!2sjp!4v1667670056008!5m2!1sja!2sjp",
+  lonlat: "point(139.76574077546226, 35.67133211499226)",
+  address: "東京都中央区銀座4丁目6-16"
 )
 place1.tags << tag1
 place1.tags << tag2
@@ -50,8 +51,9 @@ place2 = Place.create!(
   東京メトロ 有楽町線、JR 山手線・京浜東北線「有楽町駅」銀座口出口徒歩10分
   東京メトロ 銀座線・都営地下鉄 浅草線、JR 京浜東北線・東海道線・横須賀線、ゆりかもめ「新橋駅」銀座口出口徒歩10分
   ",
-  map_link: "https://goo.gl/maps/2HEVERxM2zouFkVc7",
-  lonlat: "point(139.76398345766756, 35.669746595746375)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1620.6555453179315!2d139.763962!3d35.6693413!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bef472c0001%3A0xcfcb0363f18109fc!2sGINZA%20SIX!5e0!3m2!1sja!2sjp!4v1667669997551!5m2!1sja!2sjp",
+  lonlat: "point(139.76398345766756, 35.669746595746375)",
+  address: "東京都中央区銀座6丁目10-1"
 )
 
 place2.tags << tag1
@@ -85,8 +87,9 @@ place3 = Place.create!(
   access: "・JR「東京駅」八重洲北口徒歩5分
   ・東京メトロ銀座線・東西線「日本橋駅」直結
   ・都営地下鉄浅草線「日本橋駅」徒歩4分",
-  map_link: "https://goo.gl/maps/UhpiYYcMuBuBHCcK6",
-  lonlat: "point(139.773512, 35.68117730991948)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6481.694823451809!2d139.773512!3d35.680759!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188957eeda32ad%3A0x58716e5c91efbc3f!2z44CSMTAzLTAwMjcg5p2x5Lqs6YO95Lit5aSu5Yy65pel5pys5qmL77yS5LiB55uu77yU4oiS77yR!5e0!3m2!1sja!2sjp!4v1667669951636!5m2!1sja!2sjp",
+  lonlat: "point(139.773512, 35.68117730991948)",
+  address: "東京都中央区日本橋2丁目4-1"
 )
 
 place3.tags << tag1
@@ -111,8 +114,9 @@ place4 = Place.create!(
   東京メトロ有楽町線「銀座一丁目駅」9番出口より徒歩3分
   都営地下鉄浅草線「東銀座駅」A8番出口より徒歩3分
   JR「有楽町駅」より徒歩8分",
-  map_link: "https://goo.gl/maps/ozHVmk38iLSCHfbK9",
-  lonlat: "point(139.76601075767078, 35.67209006272129)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.2076139659694!2d139.7659893!3d35.6718896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188be69c80f1c7%3A0x6cfcc44679728e21!2z44CSMTA0LTAwNjEg5p2x5Lqs6YO95Lit5aSu5Yy66YqA5bqn77yT5LiB55uu77yW4oiS77yR!5e0!3m2!1sja!2sjp!4v1667669909298!5m2!1sja!2sjp",
+  lonlat: "point(139.76601075767078, 35.67209006272129)",
+  address: "東京都中央区銀座3丁目6-1"
 )
 
 place4.tags << tag1
@@ -132,8 +136,9 @@ place5 = Place.create!(
   東西線大手町駅徒歩4分
   半蔵門線大手町駅徒歩8分
   有楽町線有楽町駅徒歩11分",
-  map_link: "https://goo.gl/maps/5ASj6JXNCfZrrHHA8",
-  lonlat: "point(139.76423733863345, 35.683057587723724)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6481.546327429794!2d139.764409!3d35.682587!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bf9b11e03ab%3A0x94bd79343edb8416!2z5paw5Li444Gu5YaF44OT44Or44OH44Kj44Oz44Kw!5e0!3m2!1sja!2sjp!4v1667669861055!5m2!1sja!2sjp",
+  lonlat: "point(139.76423733863345, 35.683057587723724)",
+  address: "東京都千代田区丸の内1丁目5-1"
 )
 
 place5.tags << tag1
@@ -151,8 +156,9 @@ place6 = Place.create!(
   東京メトロ有楽町線「有楽町」駅　徒歩4分
   東京メトロ丸ノ内線・日比谷線・銀座線「銀座」駅　徒歩5分
   JR山手線・京浜東北線「有楽町」駅　徒歩5分",
-  map_link: "https://goo.gl/maps/68nTCeyY12x2fH3d8",
-  lonlat: "point(139.7592191153416, 35.67383511352686)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1620.5661630608263!2d139.75917619999998!3d35.6737436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bee3cf5818b%3A0x2c4beff9dc43a879!2z5p2x5Lqs44Of44OD44OJ44K_44Km44Oz5pel5q-U6LC3!5e0!3m2!1sja!2sjp!4v1667669798912!5m2!1sja!2sjp",
+  lonlat: "point(139.7592191153416, 35.67383511352686)",
+  address: "東京都千代田区有楽町1丁目1-2"
 )
 
 place6.tags << tag1
@@ -182,8 +188,9 @@ place7 = Place.create!(
   日比谷線：銀座駅〔Ｃ９〕 徒歩３分
   千代田線：日比谷駅〔Ｄ８〕 徒歩８分
   都営三田線：日比谷駅〔Ｄ８〕 徒歩５分",
-  map_link: "https://goo.gl/maps/vsRwAdZ4mm3eXWG5A",
-  lonlat: "point(139.76430954232922, 35.67511660147696)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3241.0857710338323!2d139.764331!3d35.67489!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188be53d8f6d49%3A0x6b04420514b9431d!2z44CSMTAwLTAwMDYg5p2x5Lqs6YO95Y2D5Luj55Sw5Yy65pyJ5qW955S677yS5LiB55uu77yR77yQ4oiS77yR!5e0!3m2!1sja!2sjp!4v1667669265462!5m2!1sja!2sjp",
+  lonlat: "point(139.76430954232922, 35.67511660147696)",
+  address: "東京都千代田区有楽町2丁目10-1"
 )
 
 place7.tags << tag1
@@ -199,8 +206,9 @@ place8 = Place.create!(
   access: "JR 東京駅から徒歩約1分
   丸ノ内線東京駅　地下道より直結
   千代田線二重橋前駅から徒歩約2分",
-  map_link: "https://goo.gl/maps/cqr4e1thftHLP8tB7",
-  lonlat: "point(139.76494762698758, 35.67992545669168)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6481.793681751183!2d139.765012!3d35.679542!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4934f603ad7b2e75!2zS0lUVEXjgqzjg7zjg4fjg7M!5e0!3m2!1sja!2sjp!4v1667668953922!5m2!1sja!2sjp",
+  lonlat: "point(139.76494762698758, 35.67992545669168)",
+  address: "東京都千代田区丸の内2丁目7-2 KITTE丸の内 6F"
 )
 place8.tags << tag1
 place8.tags << tag2
@@ -222,8 +230,9 @@ place9 = Place.create!(
   access: "大手町駅から地下1階にてC2b出口が直結
   竹橋駅4出口から徒歩3分
   東京駅丸の内出口から徒歩15分",
-  map_link: "https://goo.gl/maps/NH3pke4Lbrtq4LvN7",
-  lonlat: "point(139.76276428461415, 35.68895574236939)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.523661360423!2d139.7627321!3d35.6887292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c061d2b2677%3A0xbaf2735fc7eb8025!2z44CSMTAwLTAwMDQg5p2x5Lqs6YO95Y2D5Luj55Sw5Yy65aSn5omL55S677yR5LiB55uu77yT4oiS77yRIEpB44OT44Or!5e0!3m2!1sja!2sjp!4v1667668862384!5m2!1sja!2sjp",
+  lonlat: "point(139.76276428461415, 35.68895574236939)",
+  address: "東京都千代田区大手町1丁目3-1"
 )
 
 place9.tags << tag1
@@ -256,8 +265,9 @@ place10 = Place.create!(
   end_time: "21:00",
   access: "都営地下鉄大江戸線「勝どき」駅下車 A2a・b出口（月島駅側）より徒歩4分
   東京メトロ有楽町線・都営地下鉄大江戸線「月島」駅下車 10番出口より徒歩9分",
-  map_link: "https://goo.gl/maps/TL2QRw5hnr5SLzXX6",
-  lonlat: "point(139.78269556699857, 35.65752869264157)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.79704024159!2d139.7827814!3d35.6573718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018897833cde967%3A0x67c8a3e3c280c546!2z44CSMTA0LTAwNTMg5p2x5Lqs6YO95Lit5aSu5Yy65pm05rW377yR5LiB55uu77yY4oiS77yR77yW!5e0!3m2!1sja!2sjp!4v1667668806138!5m2!1sja!2sjp",
+  lonlat: "point(139.78269556699857, 35.65752869264157)",
+  address: "東京都中央区晴海1丁目8-16"
 )
 place10.tags << tag1
 place10.tags << tag2
@@ -290,8 +300,9 @@ place11 = Place.create!(
   東京メトロ日比谷線『神谷町駅』4番出口より徒歩8分
   東京メトロ千代田線『赤坂駅』5番出口より徒歩9分
   東京メトロ丸の内線『国会議事堂前駅』3番出口より徒歩10分",
-  map_link: "https://goo.gl/maps/Z51aYoAWCspEMnac9",
-  lonlat: "point(139.740015, 35.6674856512534)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6482.801187231773!2d139.740015!3d35.667137!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b85242e57f5%3A0xc57bb3108bd9de67!2z44CSMTA3LTAwNTIg5p2x5Lqs6YO95riv5Yy66LWk5Z2C77yR5LiB55uu77yR77yS4oiS77yT77yS!5e0!3m2!1sja!2sjp!4v1667668687520!5m2!1sja!2sjp",
+  lonlat: "point(139.740015, 35.6674856512534)",
+  address: "東京都港区赤坂1丁目12-32"
 )
 
 place11.tags << tag1
@@ -309,8 +320,9 @@ place12 = Place.create!(
   東京メトロ日比谷線『神谷町駅』4番出口より徒歩8分
   東京メトロ千代田線『赤坂駅』5番出口より徒歩9分
   東京メトロ丸の内線『国会議事堂前駅』3番出口より徒歩10分",
-  map_link: "https://goo.gl/maps/Z51aYoAWCspEMnac9",
-  lonlat: "point(139.740015, 35.6674856512534)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6482.801187231773!2d139.740015!3d35.667137!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b85242e57f5%3A0xc57bb3108bd9de67!2z44CSMTA3LTAwNTIg5p2x5Lqs6YO95riv5Yy66LWk5Z2C77yR5LiB55uu77yR77yS4oiS77yT77yS!5e0!3m2!1sja!2sjp!4v1667668580335!5m2!1sja!2sjp",
+  lonlat: "point(139.740015, 35.6674856512534)",
+  address: "東京都港区赤坂1丁目12-32"
 )
 
 place12.tags << tag1
@@ -327,8 +339,9 @@ place13 = Place.create!(
   東京メトロ銀座線 上野広小路駅 直結、日比谷線 仲御徒町駅より徒歩3分
   都営大江戸線上野御徒町駅より徒歩1分
   京成電鉄京成上野駅より徒歩7分",
-  map_link: "https://goo.gl/maps/NAaHugMe3BV3CAoJ7",
-  lonlat: "point(139.77328325397508, 35.70786532238021)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6479.52334663487!2d139.773412!3d35.707482!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcaa7301f0201d89a!2z5p2-5Z2C5bGLIOS4iumHjuW6lw!5e0!3m2!1sja!2sus!4v1667668505185!5m2!1sja!2sus",
+  lonlat: "point(139.77328325397508, 35.70786532238021)",
+  address: "東京都台東区上野3丁目29-5"
 )
 
 place13.tags << tag1
@@ -345,8 +358,9 @@ place14 = Place.create!(
   JR「上野」駅（公園口）から徒歩5分
   東京メトロ銀座線・日比谷線「上野」駅（７番出口）から徒歩10分
   京成線「京成上野」駅（正面口）から徒歩10分",
-  map_link: "https://goo.gl/maps/i9UyLW8ZuMDhPiZQ9",
-  lonlat: "point(139.77674698465836, 35.71583099682514)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.4318753227017!2d139.77678989999998!3d35.715595799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188e9c8aeaaaab%3A0x9b5afd54b728e89c!2z5Zu956uL56eR5a2m5Y2a54mp6aSoIOWcsOeQg-mkqA!5e0!3m2!1sja!2sjp!4v1667668446357!5m2!1sja!2sjp",
+  lonlat: "point(139.77674698465836, 35.71583099682514)",
+  address: "東京都台東区上野公園7-20 国立科学博物館地球館"
 )
 
 place14.tags << tag1
@@ -360,8 +374,9 @@ place15 = Place.create!(
   start_time: "9:30",
   end_time: "16:30",
   access: "	JR、京成線、日暮里・舎人ライナー 日暮里駅北改札口を出て西口から徒歩5分",
-  map_link: "https://goo.gl/maps/CGw6ZN2wFJXmf3ULA",
-  lonlat: "point(139.76838552513965, 35.72694416236853)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1619.4872836606528!2d139.768525!3d35.726844!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x48f5ab29bbf7fdd0!2z5pyd5YCJ5b2r5aGR6aSo!5e0!3m2!1sja!2sjp!4v1667668370835!5m2!1sja!2sjp",
+  lonlat: "point(139.76838552513965, 35.72694416236853)",
+  address: "東京都台東区谷中7丁目18-10"
 )
 
 place15.tags << tag1
@@ -377,8 +392,9 @@ place16 = Place.create!(
   access: "	JR各線「新宿駅」ミライナタワー改札・甲州街道改札・新南改札直結。
   都営新宿線・都営大江戸線・京王新線「新宿駅」より徒歩5分。
   東京メトロ副都心線「新宿三丁目駅」より徒歩3分",
-  map_link: "https://goo.gl/maps/1ZcVWJsZqz6Sj2Rp6",
-  lonlat: "point(139.70187516892986, 35.688885120531786)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3240.5254691292025!2d139.6996543!3d35.6886847!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cdac81f3bf5%3A0xd246d03c1aeda4f8!2z44OL44Ol44Km44Oe44Oz5paw5a6_!5e0!3m2!1sja!2sjp!4v1667668317410!5m2!1sja!2sjp",
+  lonlat: "point(139.70187516892986, 35.688885120531786)",
+  address: "東京都新宿区新宿4丁目1-6"
 )
 
 place16.tags << tag1
@@ -419,8 +435,9 @@ place17 = Place.create!(
   access: "東京メトロ丸ノ内線新宿三丁目駅伊勢丹方面改札から徒歩約１分
   東京メトロ副都心線新宿三丁目交差点改札から徒歩約２分または伊勢丹正面改札から徒歩約３０秒(伊勢丹正面改札は15時以降使用可能）
     都営新宿線新宿三丁目改札から徒歩約３分",
-  map_link: "https://goo.gl/maps/yuN7CCcT1Kr3kjPq9",
-  lonlat: "point(139.70464660000002,35.69181798130809)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.4080900986296!2d139.7046466!3d35.691573999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cdba56b3bf7%3A0x8b741cc73341edb5!2z5LyK5Yui5Li5IOaWsOWuv-W6lw!5e0!3m2!1sja!2sjp!4v1667668212863!5m2!1sja!2sjp",
+  lonlat: "point(139.70464660000002,35.69181798130809)",
+  address: "東京都新宿区新宿3丁目14-1"
 )
 place17.tags << tag1
 place17.tags << tag2
@@ -437,8 +454,9 @@ place18 = Place.create!(
   都営新宿線新宿三丁目駅A1口から徒歩約2分
   東京メトロ副都心線新宿三丁目駅からA1徒歩約2分
   JR各線新宿駅東口から徒歩約5分",
-  map_link: "https://goo.gl/maps/cfLDzV4grA7NRPZV7",
-  lonlat: "point(139.70406400000002, 35.69147124767695)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6480.868425915149!2d139.704064!3d35.690931!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1b7b25d83eb308ff!2z5paw5a6_44Oe44Or44KkIOacrOmkqA!5e0!3m2!1sja!2sjp!4v1667668159807!5m2!1sja!2sjp",
+  lonlat: "point(139.70406400000002, 35.69147124767695)",
+  address: "東京都新宿区新宿3丁目30-13"
 )
 place18.tags << tag1
 place18.tags << tag2
@@ -452,8 +470,9 @@ place19 = Place.create!(
   start_time: "8:00",
   end_time: "23:00",
   access: "JR各線恵比寿駅直結",
-  map_link: "https://goo.gl/maps/9M4Dw4uxdKuQCCnX8",
-  lonlat: "point(139.7096779846133, 35.64669875827924)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.2355421234442!2d139.7096458!3d35.646567999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b405b2840e9%3A0xd00b2ba6437ca775!2z44Ki44OI44Os5oG15q-U5a-_IOilv-mkqA!5e0!3m2!1sja!2sjp!4v1667668105001!5m2!1sja!2sjp",
+  lonlat: "point(139.7096779846133, 35.64669875827924)",
+  address: "東京都渋谷区恵比寿南1丁目6-1"
 )
 Store.create!(
   place_id: place19.id,
@@ -474,8 +493,9 @@ place20 = Place.create!(
   start_time: "10:00",
   end_time: "22:00",
   access: "西武池袋線池袋駅、JR各線池袋駅から徒歩数分",
-  map_link: "https://goo.gl/maps/YvMTCZxoyCWvDehM8",
-  lonlat: "point(139.71165296557777, 35.729060599723496)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.8925792220257!2d139.71181389999998!3d35.7288603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d67fef93b19%3A0xcd9ac1373273ee1e!2z6KW_5q2m5rGg6KKL5pys5bqX!5e0!3m2!1sja!2sjp!4v1667668037363!5m2!1sja!2sjp",
+  lonlat: "point(139.71165296557777, 35.729060599723496)",
+  address: "東京都豊島区南池袋1丁目28-1"
 )
 
 place20.tags << tag1
@@ -489,8 +509,9 @@ place21 = Place.create!(
   start_time: "9:00",
   end_time: "16:30",
   access: "東急東横線・東京メトロ日比谷線中目黒駅から5分",
-  map_link: "https://goo.gl/maps/6yGaitCSQwNp1VnV9",
-  lonlat: "point(139.69819702387016, 35.64179818539245)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6485.275671431132!2d139.6980683!3d35.6366538!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b49c80bdc73%3A0x5c80d8950a40fe!2z55uu6buS5Yy65b255omA!5e0!3m2!1sja!2sjp!4v1667667987362!5m2!1sja!2sjp",
+  lonlat: "point(139.69819702387016, 35.64179818539245)",
+  address:"東京都目黒区上目黒2丁目19-15"
 )
 place21.tags << tag1
 place21.tags << tag2
@@ -503,8 +524,9 @@ place22 = Place.create!(
   start_time: "7:00",
   end_time: "21:00",
   access: "東急田園都市線池尻大橋駅下車約3分、東急バス「大橋」下車約3分",
-  map_link: "https://goo.gl/maps/amtNVFsAjBKmpRWv6",
-  lonlat: "point(139.6875581981072, 35.65121338699545)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.0530249204908!2d139.68755819999998!3d35.651065200000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f4abbe170ab3%3A0x49b378992a0735fb!2z55uu6buS5aSp56m65bqt5ZyS!5e0!3m2!1sja!2sjp!4v1667576257917!5m2!1sja!2sjp",
+  lonlat: "point(139.6875581981072, 35.65121338699545)",
+  address: "東京都目黒区大橋1丁目9-2"
 )
 place22.tags << tag1
 place22.tags << tag2
@@ -517,8 +539,9 @@ place23 = Place.create!(
   start_time: "10:00",
   end_time: "20:00",
   access: "東急目黒線武蔵小山駅直結",
-  map_link: "https://goo.gl/maps/oLccyBnJ36acSyha6",
-  lonlat: "point(139.70438923063756, 35.620680671728735)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3243.2963938743!2d139.7020396!3d35.620419!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ad9709e333d%3A0xd7aeafabf220c272!2z44Ko44OI44Oi5q2m6JS15bCP5bGx!5e0!3m2!1sja!2sjp!4v1667576187863!5m2!1sja!2sjp",
+  lonlat: "point(139.70438923063756, 35.620680671728735)",
+  address: "東京都品川区小山3丁目4-8"
 )
 place23.tags << tag1
 place23.tags << tag2
@@ -540,8 +563,9 @@ place24 = Place.create!(
   start_time: "10:00",
   end_time: "21:00",
   access: "小田急線「成城学園前駅」下車すぐ",
-  map_link: "https://goo.gl/maps/tkJt4DvSDdAJVCay9",
-  lonlat: "point(139.59851406931668, 35.64020123910217)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.5038067973237!2d139.59859989999998!3d35.6399571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f1689ac55003%3A0x1a4c109a81f16fe1!2z5oiQ5Z-O44Kz44Or44OG44Kj!5e0!3m2!1sja!2sjp!4v1667576137230!5m2!1sja!2sjp",
+  lonlat: "point(139.59851406931668, 35.64020123910217)",
+  address: "東京都世田谷区成城6丁目5-34"
 )
 place24.tags << tag1
 place24.tags << tag2
@@ -561,8 +585,9 @@ place25 = Place.create!(
   start_time: "10:00",
   end_time: "21:00",
   access: "小田急線「経堂駅」下車すぐ",
-  map_link: "https://goo.gl/maps/CAaJGTtNQLwnx9X8A",
-  lonlat: "point(139.63563858650625, 35.65152724225466)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.0409949342297!2d139.6356064!3d35.6513616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f39606774787%3A0x9165424c6e819db9!2z57WM5aCC44Kz44Or44OG44Kj!5e0!3m2!1sja!2sjp!4v1667575203718!5m2!1sja!2sjp",
+  lonlat: "point(139.63563858650625, 35.65152724225466)",
+  access: "東京都世田谷区経堂2丁目1-33"
 )
 
 place25.tags << tag1
@@ -585,8 +610,9 @@ place26 = Place.create!(
   start_time: "10:00",
   end_time: "20:00",
   access: "東急田園都市線/東急大井町線二子玉川駅西口徒歩2分",
-  map_link: "https://goo.gl/maps/ZRkkiJ3NZAhDiL8w5",
-  lonlat: "point(139.62641597537328, 35.61336956086154)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3243.53876668654!2d139.6245706!3d35.6144424!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfc778a3a914e8f99!2z546J5bed6auY5bO25bGL77yz772l77yj!5e0!3m2!1sja!2sjp!4v1667575063565!5m2!1sja!2sjp",
+  lonlat: "point(139.62641597537328, 35.61336956086154)",
+  address: "東京都世田谷区玉川3丁目17-1"
 )
 place26.tags << tag1
 place26.tags << tag2
@@ -616,8 +642,9 @@ place27 = Place.create!(
   start_time: "10:00",
   end_time: "20:00",
   access: "東急田園都市線/東急大井町線二子玉川駅西口徒歩2分",
-  map_link: "https://goo.gl/maps/ZRkkiJ3NZAhDiL8w5",
-  lonlat: "point(139.62641597537328, 35.61336956086154)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3243.53876668654!2d139.6245706!3d35.6144424!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfc778a3a914e8f99!2z546J5bed6auY5bO25bGL77yz772l77yj!5e0!3m2!1sja!2sjp!4v1667574977628!5m2!1sja!2sjp",
+  lonlat: "point(139.62641597537328, 35.61336956086154)",
+  address: "東京都世田谷区玉川3丁目17-1"
 )
 
 place27.tags << tag1
@@ -647,8 +674,9 @@ place28 = Place.create!(
   start_time: "10:00",
   end_time: "20:00",
   access: "東急田園都市線/東急大井町線二子玉川駅西口徒歩2分",
-  map_link: "https://goo.gl/maps/ZRkkiJ3NZAhDiL8w5",
-  lonlat: "point(139.62641597537328, 35.61336956086154)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3243.53876668654!2d139.6245706!3d35.6144424!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfc778a3a914e8f99!2z546J5bed6auY5bO25bGL77yz772l77yj!5e0!3m2!1sja!2sjp!4v1667574904058!5m2!1sja!2sjp",
+  lonlat: "point(139.62641597537328, 35.61336956086154)",
+  address: "東京都世田谷区玉川3丁目17-1"
 )
 
 place28.tags << tag1
@@ -678,8 +706,9 @@ place29 = Place.create!(
   start_time: "8:00",
   end_time: "19:00",
   access: "京王井の頭線永福町駅直結",
-  map_link: "https://goo.gl/maps/6F9e2YQeDRVgX9gu6",
-  lonlat: "point(139.6432211693167, 35.67820364947157)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d25928.28915532453!2d139.643307!3d35.676112!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb33c0f6ce10eeac0!2z5Lqs546L44Oq44OI44OK44O844OJIOawuOemj-eUug!5e0!3m2!1sja!2sjp!4v1667489374147!5m2!1sja!2sjp",
+  lonlat: "point(139.6432211693167, 35.67820364947157)",
+  address: "東京都杉並区永福2丁目60-31"
 )
 
 place29.tags << tag1
@@ -700,8 +729,9 @@ place30 = Place.create!(
   start_time: "10:00",
   end_time: "21:00",
   access: "京王井の頭線、JR吉祥寺駅直結",
-  map_link: "https://goo.gl/maps/2YnG1sVnP7hia5wx8",
-  lonlat: "point(139.5798234232918, 35.70370108501663)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12959.808616409602!2d139.580038!3d35.702795!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcd6a3353cfa84940!2z44Kt44Op44Oq44OKIOS6rOeOi-WQieelpeWvug!5e0!3m2!1sja!2sjp!4v1667489213358!5m2!1sja!2sjp",
+  lonlat: "point(139.5798234232918, 35.70370108501663)",
+  address: "東京都武蔵野市吉祥寺南町2丁目1-25"
 )
 
 place30.tags << tag1
@@ -715,8 +745,9 @@ place31 = Place.create!(
   start_time: "10:00",
   end_time: "21:00",
   access: "JR中央本線豊田駅北口から徒歩約3分",
-  map_link: "https://goo.gl/maps/qDk9kQ3rDckfcmE67",
-  lonlat: "point(139.38088894754867, 35.662161214474764)"
+  map_link: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3241.5229860365257!2d139.3781424!3d35.6641225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e2147f98b923%3A0x37ba06ae4fd490f5!2z44Kk44Kq44Oz44Oi44O844Or5aSa5pGp5bmz44Gu5qOu!5e0!3m2!1sja!2sjp!4v1667488250755!5m2!1sja!2sjp",
+  lonlat: "point(139.38088894754867, 35.662161214474764)",
+  address: '東京都日野市多摩平2丁目4-1'
 )
 place31.tags << tag1
 place31.tags << tag3
