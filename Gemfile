@@ -91,3 +91,5 @@ gem 'sorcery'
 gem 'carrierwave', '~> 2.0'
 
 gem "mini_magick"
+
+gem 'seed-fu'
