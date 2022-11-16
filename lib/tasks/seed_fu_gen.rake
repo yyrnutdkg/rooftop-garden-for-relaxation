@@ -15,4 +15,12 @@ namespace :seed_fu_gen do
       end
     end
   end
+  desc 'generate seed-fu file for placetag by db'
+  task create_place_tag_seed_by_db: :environment do
+    SeedFu::Writer.write('./db/fixtures/place_tag_gen.rb', class_name: 'PlaceTag') do |w|
+      PlaceTag.all.each do |p|
+        w << p.as_json(except: %i[create_at, update_at]);
+      end
+    end
+  end
 end
