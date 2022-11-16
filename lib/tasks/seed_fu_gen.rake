@@ -31,4 +31,12 @@ namespace :seed_fu_gen do
       end
     end
   end
+  desc 'generate seed-fu file for event by db'
+  task create_event_seed_by_db: :environment do
+    SeedFu::Writer.write('./db/fixtures/event_gen.rb', class_name: 'Event') do |w|
+      Event.all.each do |p|
+        w << p.as_json(except: %i[create_at, update_at]);
+      end
+    end
+  end
 end
