@@ -23,4 +23,12 @@ namespace :seed_fu_gen do
       end
     end
   end
+  desc 'generate seed-fu file for store by db'
+  task create_store_seed_by_db: :environment do
+    SeedFu::Writer.write('./db/fixtures/store_gen.rb', class_name: 'Store') do |w|
+      Store.all.each do |p|
+        w << p.as_json(except: %i[create_at, update_at]);
+      end
+    end
+  end
 end
