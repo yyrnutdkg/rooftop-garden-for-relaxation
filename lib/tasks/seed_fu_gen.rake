@@ -7,4 +7,12 @@ namespace :seed_fu_gen do
       end
     end
   end
+  desc 'generate seed-fu file for tag by db'
+  task create_tag_seed_by_db: :environment do
+    SeedFu::Writer.write('./db/fixtures/tag_gen.rb', class_name: 'Tag') do |w|
+      Tag.all.each do |p|
+        w << p.as_json(except: %i[create_at, update_at]);
+      end
+    end
+  end
 end
