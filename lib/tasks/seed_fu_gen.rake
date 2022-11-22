@@ -47,4 +47,12 @@ namespace :seed_fu_gen do
       end
     end
   end
+  desc 'generate seed-fu file for place_user by db'
+  task create_place_user_seed_by_db: :environment do
+    SeedFu::Writer.write('./db/fixtures/place_user_gen.rb', class_name: 'PlaceUser') do |w|
+      PlaceUser.all.each do |p|
+        w << p.as_json(except: %i[create_at, update_at]);
+      end
+    end
+  end
 end
