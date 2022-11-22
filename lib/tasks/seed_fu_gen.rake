@@ -39,4 +39,12 @@ namespace :seed_fu_gen do
       end
     end
   end
+  desc 'generate seed-fu file for user by db'
+  task create_user_seed_by_db: :environment do
+    SeedFu::Writer.write('./db/fixtures/user_gen.rb', class_name: 'User') do |w|
+      User.all.each do |p|
+        w << p.as_json(except: %i[create_at, update_at]);
+      end
+    end
+  end
 end
