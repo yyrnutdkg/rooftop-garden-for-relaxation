@@ -1,10 +1,15 @@
 document.addEventListener('turbolinks:load', () => {
   const numOfDisplayItems = 3;
-  document.querySelectorAll(`.card-of-post:nth-child(n + ${numOfDisplayItems + 1})`).forEach(function(value){
-    value.classList.add('is-hidden');
-  })
-
   const moreViewPostsBtn = document.getElementById('post-more-view-btn');
+  const lenghtOfdisplayItems = document.querySelectorAll('.card-of-post').length;
+  if(lenghtOfdisplayItems <= numOfDisplayItems){
+    moreViewPostsBtn.classList.add('is-hidden');
+  }else{
+    document.querySelectorAll(`.card-of-post:nth-child(n + ${numOfDisplayItems + 1})`).forEach(function(value){
+      value.classList.add('is-hidden');
+    })
+  }
+
   moreViewPostsBtn.addEventListener('click', ()=>{
     const displayItems = document.querySelectorAll('.card-of-post.is-hidden');
 
