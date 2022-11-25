@@ -7,7 +7,7 @@ class PostsController < ApplicationController
       current_user.own_post(@post)
       redirect_to place_path(params[:place_id]), success: t('defaults.message.created', item: Post.model_name.human )
     else
-      flash.now[danger] =  t('defaults.message.not_created', item: Post.model_name.human )
+      flash[:danger] =  t('defaults.message.not_created', item: Post.model_name.human )
       redirect_to place_path(params[:place_id])
     end
   end
@@ -22,7 +22,7 @@ class PostsController < ApplicationController
     if(@post.update(post_params))
       redirect_to place_path(params[:place_id]), success: t('defaults.message.updated', item: Post.model_name.human )
     else
-      flash.now[:danger] = t('defaults.message.not_updated', item: Post.model_name.human )
+      flash[:danger] = t('defaults.message.not_updated', item: Post.model_name.human )
       render :edit
     end
   end

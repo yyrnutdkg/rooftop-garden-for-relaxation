@@ -4,4 +4,6 @@ class Post < ApplicationRecord
   belongs_to :place
 
   enum post_type: {tweet: 0, description: 1}
+
+  validates :description, presence: true
 end
