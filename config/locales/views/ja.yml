@@ -55,6 +55,9 @@ ja:
       user-do-not-comment: 'ユーザ登録して一言レビューを投稿しよう！'
       user-prompt: '登録はこちら↓'
   posts:
+    edit:
+      title: '投稿編集'
+
     post_list:
       see-more: 'もっとみる！'
     post:

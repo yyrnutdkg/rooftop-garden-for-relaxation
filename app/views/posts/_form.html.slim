@@ -1,8 +1,5 @@
-div
-  h4
-    = (t 'defaults.post_simple_review')
 div.m-2
-  = form_with model: post, url: [place, post] do |form|
+  = form_with model:[place, post] do |form|
     div.mb-3
       = form.label :title, class: 'form-label'
       = form.text_field :title, class: 'form-control'

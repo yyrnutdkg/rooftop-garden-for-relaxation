@@ -1,5 +1,11 @@
 ja:
   activerecord:
+    models:
+      event: 'イベント'
+      store: '店舗'
+      post: '投稿'
+      place: '場所'
+      user: 'ユーザー'
     attributes:
       place:
         name: '名称'
