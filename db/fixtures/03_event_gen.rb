@@ -6,6 +6,5 @@
 #
 #   rake seed_fu_gen:create_event_seed_by_db
 #
-Event.seed(:id
-)
+
 # End auto-generated file.
