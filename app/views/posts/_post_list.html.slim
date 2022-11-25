@@ -1,0 +1,6 @@
+div.cards-of-post
+  - posts.each do |post|
+    = render 'posts/post', { post: post }
+div.more-btn
+  = button_tag class: "btn btn-primary", id: 'post-more-view-btn' do
+    = (t '.see-more')

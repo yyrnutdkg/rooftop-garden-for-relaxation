@@ -14,7 +14,8 @@ div.card-of-post
   div.post-images
     p test
   div.post-action.d-flex.justify-content-between
-    - if current_user.own?(post.users.first)
-      i.fas.fa-edit
-      = link_to place_post_path(post.place_id, post), method: :delete do
-        i.fas.fa-trash-alt
+    - if logged_in?
+      - if current_user.own?(post.users.first)
+        i.fas.fa-edit
+        = link_to place_post_path(post.place_id, post), method: :delete do
+          i.fas.fa-trash-alt
