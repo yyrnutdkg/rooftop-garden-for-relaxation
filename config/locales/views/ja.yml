@@ -1,9 +1,10 @@
 ja:
   defaults:
-    term_of_service: 利用規約
-    privacy: プライバシー
-    about: about
-    info: 問い合わせ先
+    term_of_service: '利用規約'
+    privacy: 'プライバシーポリシー'
+    about: 'about'
+    info: 'お問い合わせ先'
+    info_subject: 'お問い合わせ内容の確認'
     mypage: 'マイページ'
     menu: 'メニュー'
     search-detail: '詳細検索'
@@ -29,6 +30,9 @@ ja:
       not_updated: "%{item}を更新できませんでした。"
       deleted: "%{item}を削除しました"
       delete_confirm: '削除しますか？'
+  contacts:
+    new:
+      title: 'お問い合わせ'
   password_resets:
     new:
       title: 'パスワード再発行'
