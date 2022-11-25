@@ -23,6 +23,7 @@ ja:
     message:
       require_login: 'ログインしてください'
       created: "%{item}を作成しました。"
+      sent: "%{item}を送信しました。"
       not_created: "%{item}を作成できませんでした。"
       updated: "%{item}を更新しました。"
       not_updated: "%{item}を更新できませんでした。"
