@@ -11,7 +11,7 @@ class UserMailer < ApplicationMailer
 
     mail(
        to: user.email,
-       from: "from@example.com",
+       from: ENV['SENDER_ADDRESS'],
        subject: t('defaults.password_reset')
     )
   end
