@@ -1,4 +1,4 @@
-# rooftop-garden-for-relaxation
+# TopGardrary
 
 ## サービス概要
 都心部で働いている人々へ
