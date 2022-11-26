@@ -63,4 +63,12 @@ namespace :seed_fu_gen do
       end
     end
   end
+  desc 'generate seed-fu file for post_user by db'
+  task create_post_user_seed_by_db: :environment do
+    SeedFu::Writer.write('./db/fixtures/post_user_gen.rb', class_name: 'PostUser') do |w|
+      PostUser.all.each do |p|
+        w << p.as_json(except: %i[create_at, update_at]);
+      end
+    end
+  end
 end
