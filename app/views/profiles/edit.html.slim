@@ -7,10 +7,7 @@ div.container
           = form.file_field :icon, onchange: "previewImage('iconPreview')", class: 'form-control', accept: 'image/*'
           = form.hidden_field :icon_cache
         div.rounded-circle
-          - if Rails.env.development? || @user.icon.url == @user.icon.default_url
-            = image_tag @user.icon.url, id: 'iconPreview', size: '100x100'
-          - else
-            = image_tag @user.icon, id: 'iconPreview', size: '100x100'
+          = image_tag @user.icon.url, id: 'iconPreview', size: '100x100'
         div.form-group
           = form.label :name
           = form.text_field :name, class: 'form-control'
