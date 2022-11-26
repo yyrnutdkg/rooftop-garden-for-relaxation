@@ -14,6 +14,7 @@
  *= require_self
  */
 
+@import "footer";
 @import "toppage";
 @import "search_detail";
 @import "place/index";
@@ -27,6 +28,8 @@
 
 body{
   margin: 0px ;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .pagination li a{
@@ -41,4 +44,36 @@ body{
 
 .pagination li a:hover{
   border-radius: 10px;
+}
+
+html,body{
+  height:100%;
+}
+
+body .wrapper{
+  width: 100%;
+  position: relative;
+  min-height: 100%;
+}
+
+.main-content-part{
+  padding-bottom:120px; /*フッターの高さと同じ*/
+}
+
+.footer-main{
+  height:120px;
+  position:absolute;
+  bottom:0;
+}
+
+@media screen and (max-width: 768px) {
+  .main-content-part{
+    padding-bottom:200px; /*フッターの高さと同じ*/
+  }
+
+  .footer-main{
+    height:200px;
+    position:absolute;
+    bottom:0;
+  }
 }

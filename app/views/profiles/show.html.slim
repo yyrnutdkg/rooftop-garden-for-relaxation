@@ -22,7 +22,7 @@ div.container-fluid.main-background
           div
             = t (User.human_attribute_name(:user_role))
           div
-            = current_user.user_role
+            = current_user.user_role_i18n
         div.d-flex.justify-content-between.align-items-center.p-2
           div.text-center = t (User.human_attribute_name(:password))
           div.text-center = (t '.password_hide')
@@ -38,10 +38,9 @@ div.container-fluid.main-background
             div.favorite-card.border.p-3.mb-3
               div.text-center.mb-2
                 h4 = place.name
-              div.d-flex.justify-content-between.m-2
-                p 地区
-                p 最寄り駅
-                = render 'bookmarks/bookmark_button', { place: place }
+              div.d-flex.justify-content-end.m-2
+                div.favorite-icon
+                  = render 'bookmarks/bookmark_button', { place: place }
               div.text-end
                 = link_to place_path(place) do
                   = place.name + (t '.detail-info' )

@@ -16,6 +16,10 @@ class PlacesController < ApplicationController
     @place = Place.includes(:congestions, :events, :stores, :tags).find(params[:id])
     @post = Post.new
     @posts = Place.find(params[:id]).posts.includes(post_users: :user)
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   private

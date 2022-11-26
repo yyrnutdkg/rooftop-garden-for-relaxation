@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_23_163001) do
+ActiveRecord::Schema.define(version: 2022_11_25_153221) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(version: 2022_10_23_163001) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["place_id"], name: "index_congestions_on_place_id"
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "content", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "email", null: false
   end
 
   create_table "events", force: :cascade do |t|
@@ -70,6 +78,7 @@ ActiveRecord::Schema.define(version: 2022_10_23_163001) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.geography "lonlat", limit: {:srid=>4326, :type=>"st_point", :geographic=>true}
+    t.string "address"
   end
 
   create_table "post_users", force: :cascade do |t|
@@ -83,9 +92,9 @@ ActiveRecord::Schema.define(version: 2022_10_23_163001) do
 
   create_table "posts", force: :cascade do |t|
     t.bigint "place_id", null: false
-    t.integer "type"
+    t.integer "post_type"
     t.text "title"
-    t.text "description"
+    t.text "description", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["place_id"], name: "index_posts_on_place_id"
@@ -115,8 +124,8 @@ ActiveRecord::Schema.define(version: 2022_10_23_163001) do
     t.string "salt"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "name"
-    t.integer "user_role"
+    t.string "name", null: false
+    t.integer "user_role", default: 0
     t.string "reset_password_token"
     t.datetime "reset_password_token_expires_at"
     t.datetime "reset_password_email_sent_at"

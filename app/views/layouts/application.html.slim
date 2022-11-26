@@ -2,7 +2,7 @@ doctype html
 html
   head
     title
-      | RooftopGardenForRelaxation
+      | TopGardrary
     meta[name="viewport" content="width=device-width,initial-scale=1"]
     = csrf_meta_tags
     = csp_meta_tag
@@ -11,7 +11,14 @@ html
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
     = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
 
-  body
-    = render 'layouts/header'
-    = render 'layouts/flash_message'
-    = yield
+  body.main-background
+    div.wrapper
+      - if current_user
+        = render 'layouts/header'
+      - else
+        = render 'layouts/before_header'
+      = render 'layouts/flash_message'
+      div.main-content-part
+        = yield
+      div.container-fluid.footer-main.d-flex.justify-content-center.align-items-center.bg-light
+        = render 'layouts/footer'

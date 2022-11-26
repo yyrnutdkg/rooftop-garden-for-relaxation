@@ -89,5 +89,10 @@ gem 'sorcery'
 
 # user avator image
 gem 'carrierwave', '~> 2.0'
-
 gem "mini_magick"
+
+# seed
+gem 'seed-fu'
+
+# 環境変数用
+gem 'dotenv-rails', groups: [:development, :test]

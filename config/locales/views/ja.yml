@@ -1,22 +1,42 @@
 ja:
   defaults:
+    term_of_service: '利用規約'
+    privacy: 'プライバシーポリシー'
+    about: 'about'
+    info: 'お問い合わせ先'
+    info_subject: 'お問い合わせ内容の確認'
+    mypage: 'マイページ'
+    menu: 'メニュー'
+    search-detail: '詳細検索'
+    new-user: 'ユーザ登録'
+    login: 'ログイン'
+    logout: 'ログアウト'
+    mypage: 'マイページ'
+    register: '登録する'
     login_success: 'ログインに成功しました。'
     login_failure: 'ログインに失敗しました。'
     logout_success: 'ログアウトに成功しました。'
+    post_simple_review: 'ひとことレビューを投稿する！'
+    post_simple_words: 'ひとこと'
     post_register: '投稿する'
     password_reset: 'パスワードリセット'
     send: '送信する'
     message:
       require_login: 'ログインしてください'
       created: "%{item}を作成しました。"
+      sent: "%{item}を送信しました。"
       not_created: "%{item}を作成できませんでした。"
       updated: "%{item}を更新しました。"
       not_updated: "%{item}を更新できませんでした。"
       deleted: "%{item}を削除しました"
       delete_confirm: '削除しますか？'
+  contacts:
+    new:
+      title: 'お問い合わせ'
   password_resets:
     new:
       title: 'パスワード再発行'
+      login: 'ログインページはこちら'
     create:
       password_reset: 'パスワードリセットの手順を送信しました。'
     edit:
@@ -34,13 +54,29 @@ ja:
       favorite-list-not-exsist: 'お気に入りはまだありません。'
       go-search-detail: 'お気に入りの場所を探してみる！'
       detail-info: 'の詳細はコチラ'
+  places:
+    show:
+      comment-view: 'コメント一覧'
+      user-do-not-comment: 'ユーザ登録して一言レビューを投稿しよう！'
+      user-prompt: '登録はこちら↓'
+  posts:
+    edit:
+      title: '投稿編集'
 
-  pagination:
-    first: <i class="fas fa-angle-double-left"></i>
-    last: <i class="fas fa-angle-double-right"></i>
-    previous: <i class="fas fa-angle-left"></i>
-    next: <i class="fas fa-angle-right"></i>
-    truncate: '...'
+    post_list:
+      see-more: 'もっとみる！'
+    post:
+      posted_date: '投稿日'
+      readmore-post: 'もっと見る'
+  user_sessions:
+    new:
+      title: 'ログイン'
+      register_page: 'ユーザ新規登録はコチラ'
+      forgot_password: 'パスワード再発行はコチラ'
+  users:
+    new:
+      title: 'ユーザ登録'
+      login: 'ログインページはこちら'
   time:
     am: '午前'
     formats:
@@ -49,4 +85,5 @@ ja:
       short: '%m/%d %H:%M'
       work_time: '%-H時'
       period: '%Y年%m月%d日(%a) %H時%M分'
+      simple_date: '%Y年%m月%d日'
     pm: '午後'

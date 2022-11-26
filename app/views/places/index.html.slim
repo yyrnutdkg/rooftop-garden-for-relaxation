@@ -4,7 +4,7 @@ div.result-main.main-background.container
       div.search-area-form.bg-white.p-4.w-100
         = form_with model: @search_places_form, scope: :q, url: places_path, method: :get, html: {class: 'd-flex flex-column flex-wrap' } do |f|
           div
-            = f.label :name, '場所名'
+            = f.label :name, '検索ワード'
           div
             = f.search_field :name, { placeholder: '例：東京', class: 'w-75'}
           div
@@ -37,8 +37,6 @@ div.result-main.main-background.container
       div.result-list-vartical.d-none.d-md-block
         - @places.each do |place|
           div.result-card.bg-white.border
-            div.place-image
-              = image_tag 'no-image.png', size: '200x200'
             div.place-name
               h2 = place.name
               div.tag-list
@@ -80,8 +78,6 @@ div.result-main.main-background.container
                   - place.tags.each do |tag|
                     li
                       = tag.name
-            div.place-image
-              = image_tag 'no-image.png', size: '200x200'
             div.place-info-table
               table.place-info-horizontal-table
                 tr
