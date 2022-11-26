@@ -6,7 +6,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # include CarrierWave::MiniMagick
 
   if Rails.env.development?
-      storage :file
+    storage :file
   else
     include Cloudinary::CarrierWave
   end
@@ -55,6 +55,11 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
-
-
+  def url(*args)
+    if cached?
+      "/#{cache_path}"
+    else
+      super
+    end
+  end
 end
