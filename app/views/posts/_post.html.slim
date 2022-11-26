@@ -2,7 +2,7 @@ div.card-of-post.p-2
   div.post-title
     h4 = post.title
   div.contributor-info.d-flex.align-items-center.position-relative.mb-3
-    - if Rails.env.development?
+    - if Rails.env.development? || user.icon.url == user.icon.default_url
       = image_tag post.users.first.icon.url, size: '40x40', class: 'position-abusolute top-0 start-0' if current_user.icon?
     - else
       = image_tag post.users.first.icon, size: '40x40', class: 'position-abusolute top-0 start-0' if current_user.icon?
