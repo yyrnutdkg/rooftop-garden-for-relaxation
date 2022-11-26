@@ -1,0 +1,12 @@
+//div.container-fluid.bg-light.footer-main //.py-3.my-4
+footer
+  div
+    ul.nav.justify-content-center.border-bottom.pb-3.mb-3
+      li.nav-item
+        = link_to t('defaults.about'), about_path, class: 'nav-link px-2 text-muted'
+      li.nav-item
+        = link_to t('defaults.privacy'), privacy_path, class: 'nav-link px-2 text-muted'
+      li.nav-item
+        = link_to t('defaults.term_of_service'), tos_path, class: 'nav-link px-2 text-muted'
+      li.nav-item
+        = link_to t('defaults.info'), info_path, class: 'nav-link px-2 text-muted'

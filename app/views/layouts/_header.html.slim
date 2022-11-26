@@ -2,7 +2,7 @@ header
   nav.navbar.navbar-expand-lg.navbar-light.bg-light
     div.container-fluid
       = link_to root_path, class: 'btn btn-outline-primary' do
-         | Top
+         | TopGardrary
       div.header-search.ml-auto.d-flex.flex-row
         = form_with model: @search_places_form, scope: :q, url: places_path, method: :get, html: { class: 'd-flex' } do |f|
           = f.search_field :name, { placeholder: '例：東京', class: 'form-control'}
