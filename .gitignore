@@ -42,3 +42,4 @@ yarn-debug.log*
 
 # Ignore env
 .env
+config/cloudinary.yml

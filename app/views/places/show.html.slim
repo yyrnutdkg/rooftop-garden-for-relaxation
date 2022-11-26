@@ -121,8 +121,9 @@ div.place-detail-main.main-background
             = (t '.user-prompt')
           = link_to (t 'defaults.new-user'), new_user_path, class: 'btn btn-primary'
 
-      div.commented-area.m-2.border.border-dark.p-2
-        = render 'posts/post_list', {posts: @posts}
+      - if @posts.present?
+        div.commented-area.m-2.border.border-dark.p-2
+          = render 'posts/post_list', {posts: @posts}
 
 div.back-button.m-2
   = link_to :back do
