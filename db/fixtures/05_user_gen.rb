@@ -7,7 +7,7 @@
 #   rake seed_fu_gen:create_user_seed_by_db
 #
 #
-if(!User.find(1))
+if(User.find_by(id: 1).nil?)
   User.create!(id:1, name:'test-user', email:'test@example.com', password: 'test01', password_confirmation: 'test01')
 end
 # End auto-generated file.
