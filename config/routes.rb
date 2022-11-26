@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   get 'about', to: 'static_pages#about'
   get 'privacy', to: 'static_pages#privacy'
   get 'tos', to: 'static_pages#tos'
-  get 'info', to: 'static_pages#info'
 
   resources :users, only: %i[new create]
   get '/login', to: 'user_sessions#new'
@@ -16,7 +15,6 @@ Rails.application.routes.draw do
     resources :posts, only: %i[create edit update destroy]
   end
   resources :bookmarks, only: %i[create destroy]
-  resources :contacts, only: %i[new create]
   resources :static_pages, only: %i[show]
   resources :password_resets, only: [:new, :create, :edit, :update]
   resource :profile, only: [:show, :edit, :update]
