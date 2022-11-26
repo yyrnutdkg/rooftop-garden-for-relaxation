@@ -409,7 +409,7 @@ DEPENDENCIES
   byebug
   capybara
   carrierwave (~> 2.0)
-  cloudinary (= 1.11.1)
+  cloudinary
   dotenv-rails
   enum_help
   factory_bot_rails

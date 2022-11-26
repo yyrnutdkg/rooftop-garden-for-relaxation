@@ -98,4 +98,4 @@ gem 'seed-fu'
 gem 'dotenv-rails', groups: [:development, :test]
 
 #herokuでアップされた画像保存用
-gem 'cloudinary' , '1.11.1'
+gem 'cloudinary'
