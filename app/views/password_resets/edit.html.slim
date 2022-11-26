@@ -1,0 +1,17 @@
+div.container
+  div.row
+    div.col-md-10.m-2
+      div.password-reset-title.text-center.p-2
+        h2 = t '.title'
+      = form_with model: @user, url: password_reset_path(@token), local: true do |form|
+        div.form-group.p-2
+          = form.label :email, User.human_attribute_name(:email),class: 'me-2'
+          = @user.email
+        div.form-group.p-2
+          = form.label :password, User.human_attribute_name(:password)
+          = form.password_field :password, class: 'form-control'
+        div.form-group.p-2
+          = form.label :password_confirmation, User.human_attribute_name(:password_confirmation)
+          = form.password_field :password_confirmation, class: 'form-control'
+        div.actions.p-2.text-center
+          = form.submit class: 'btn btn-primary'

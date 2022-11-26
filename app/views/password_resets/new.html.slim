@@ -1,0 +1,14 @@
+div.container
+  div.row
+    div.col-md-10.offset-md-1.col-lg-8.offset-lg-2
+      div.password-reset-title.text-center
+        h2 = t'.title'
+    div.form-main
+      = form_with url: password_resets_path, local: true, method: :post do |form|
+        div.form-group.p-2
+          = form.label :email, User.human_attribute_name(:email)
+          = form.text_field :email, class: 'form-control'
+        div.actions.p-2
+          = form.submit (t'defaults.send'), class: 'btn btn-primary'
+    div.to-login.p-2.text-center
+      = link_to t('.login'), login_path

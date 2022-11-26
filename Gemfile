@@ -50,6 +50,7 @@ group :development do
 
   gem 'annotate'
   gem 'pry-rails'
+  gem 'letter_opener_web', '~> 2.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -82,3 +83,16 @@ gem 'rails-i18n'
 
 # Model
 gem 'enum_help'
+
+#login
+gem 'sorcery'
+
+# user avator image
+gem 'carrierwave', '~> 2.0'
+gem "mini_magick"
+
+# seed
+gem 'seed-fu'
+
+# 環境変数用
+gem 'dotenv-rails', groups: [:development, :test]

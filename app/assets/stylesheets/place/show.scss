@@ -104,3 +104,22 @@
   background: #fff;
   padding: 5px 8px;
 }
+
+.cards-of-post .card-of-post.is-hidden{
+  display: none;
+}
+.more-btn #post-more-view-btn.is-hidden{
+  display: none;
+}
+.post-main .post-description{
+  position: relative;
+  box-sizing: border-box;
+}
+
+.place-name .favorite-icon a{
+  color: #f81780;
+}
+
+.commented-area .cards-of-post .card-of-post .post-action a{
+  color: #212529
+}

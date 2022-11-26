@@ -1,10 +1,10 @@
 div.place-detail-main.main-background
   div.place-name.p-3.d-flex.flex-row
     h2 = @place.name
-    div.map-link.m-2
-       = link_to @place.map_link do
-        i.fas.fa-map-marked-alt.fa-lg
-
+    - if logged_in?
+      div.favorite-icon.text-center.ms-4
+        = render 'bookmarks/bookmark_button', { place: @place }
+        p いいね!
   div.tag-list
     ul
       - @place.tags.each do |tag|
@@ -13,7 +13,8 @@ div.place-detail-main.main-background
   div.place-info.container
     div.row
       div.image-slider.col-md-5
-        = image_tag 'no-image.png', size: '200x200'
+        //= image_tag 'no-image.png', size: '200x200'
+        iframe src= "#{@place.map_link}" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
       div.place-content.col-md-7.bg-white
         div.horizontal-table
           table.place-column
@@ -104,6 +105,24 @@ div.place-detail-main.main-background
         - else
           div.bg-white
             p.p-2 イベント情報はありません。
+  div.comment-content.container.p-3
+    div.row
+      div.comment-section-title
+        h4
+          = (t '.comment-view')+ "(#{@posts.count}件)"
+      - if logged_in?
+        div.post-comment.m-2.border.border-dark.p-2
+          = render 'posts/simple_form', { place: @place, post: @post}
+      - else
+        div.m-2
+          h5
+            = (t '.user-do-not-comment')
+          h5
+            = (t '.user-prompt')
+          = link_to (t 'defaults.new-user'), new_user_path, class: 'btn btn-primary'
+
+      div.commented-area.m-2.border.border-dark.p-2
+        = render 'posts/post_list', {posts: @posts}
 
 div.back-button.m-2
   = link_to :back do

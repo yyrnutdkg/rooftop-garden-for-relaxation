@@ -1,2 +1,7 @@
-@import '~bootstrap/scss/bootstrap';
+//@import '~bootstrap/scss/bootstrap';
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import 'bootstrap-custom';
+
+.btn {
+  border-radius: 3px;
+}

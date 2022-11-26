@@ -4,3 +4,7 @@ ja:
       store_type:
         inside: '庭園内'
         outside: '庭園周辺'
+    user:
+      user_role:
+        member: '会員'
+        admin: '管理者'

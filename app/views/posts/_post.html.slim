@@ -1,0 +1,23 @@
+div.card-of-post.p-2
+  div.post-title
+    h4 = post.title
+  div.contributor-info.d-flex.align-items-center.position-relative.mb-3
+    = image_tag post.users.first.icon.url, size: '40x40', class: 'position-abusolute top-0 start-0'
+    p.d-inline-flex.align-items-center.ms-2
+      = post.users.first.name
+    div.post-time.ms-auto
+      = "#{(t '.posted_date')}: #{l post.created_at, format: :simple_date}"
+  div.post-main.bg-white.p-3
+    div.post-description
+      div.post-description-main
+        = simple_format(post.description)
+  div.post-action.d-flex.justify-content-end
+    - if logged_in?
+      - if current_user.own?(post.users.first)
+        div.m-2
+         = link_to edit_place_post_path(post.place_id, post)
+          i.fas.fa-edit
+        div.m-2
+          = link_to place_post_path(post.place_id, post), method: :delete do
+            i.fas.fa-trash-alt
+  div.border.border-dark
