@@ -9,6 +9,8 @@ class AvatarUploader < CarrierWave::Uploader::Base
     storage :file
   else
     include Cloudinary::CarrierWave
+    process :convert => 'png'
+    process :tags => ['post_picture']
   end
 
   # Choose what kind of storage to use for this uploader:
