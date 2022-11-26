@@ -131,4 +131,5 @@ Rails.application.configure do
   :user_name => ENV['GMAIL_ADDRESS'],
   :password => ENV['GMAIL_PASSWORD'],
   :authentication => 'login'
+}
 end
