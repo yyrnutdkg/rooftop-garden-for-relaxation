@@ -8,11 +8,7 @@ div.container-fluid.main-background
         h3 = (t '.information')
       div.user-info.bg-white.border.m-2
         div.d-flex.justify-content-between.m-2.align-items-center
-          - if Rails.env.development? || current_user.icon_url == current_user.icon.default_url
-            = image_tag current_user.icon_url, size: '80x80', class: 'mr-2 rounded-circle border'
-          - else
-            = image_tag current_user.icon_url, size: '80x80', class: 'mr-2 rounded-circle border'
-            //= cl_image_tag(current_user.icon_url, width: 80, height: 80, class: 'mr-2 rounded-circle border')
+          = image_tag current_user.icon.url, size: '80x80', class: 'mr-2 rounded-circle border'
           p.text-center.align-item-center = current_user.name
           = link_to edit_profile_path do
             button.btn.btn-primary.me-2

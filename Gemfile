@@ -97,5 +97,5 @@ gem 'seed-fu'
 # 環境変数用
 gem 'dotenv-rails', groups: [:development, :test]
 
-#herokuでアップされた画像保存用
-gem 'cloudinary'
+# storage operation tool
+gem 'fog-aws'
