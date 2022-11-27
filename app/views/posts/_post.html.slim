@@ -5,7 +5,8 @@ div.card-of-post.p-2
     - if Rails.env.development? || post.users.first.icon_url == post.users.first.icon.default_url
       = image_tag post.users.first.icon_url, size: '40x40', class: 'position-abusolute top-0 start-0'
     - else
-      = cl_image_tag(post.users.first.icon_url, width: 40, height: 40, class: 'position-abusolute top-0 start-0')
+      = image_tag post.users.first.icon_url, size: '40x40', class: 'position-abusolute top-0 start-0'
+      //= cl_image_tag(post.users.first.icon_url, width: 40, height: 40, class: 'position-abusolute top-0 start-0')
     p.d-inline-flex.align-items-center.ms-2
       = post.users.first.name
     div.post-time.ms-auto
