@@ -98,4 +98,7 @@ gem 'seed-fu'
 gem 'dotenv-rails', groups: [:development, :test]
 
 #herokuでアップされた画像保存用
-gem 'cloudinary'
+#gem 'cloudinary'
+
+# storage operation tool
+gem 'fog-aws'
