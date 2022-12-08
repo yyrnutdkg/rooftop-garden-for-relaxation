@@ -99,3 +99,6 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 # storage operation tool
 gem 'fog-aws'
+
+# sitemap
+gem 'sitemap_generator'
