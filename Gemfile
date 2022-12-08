@@ -105,3 +105,6 @@ gem 'sitemap_generator'
 
 # cron
 gem 'whenever', require: false
+
+# meta
+gem "meta-tags"
