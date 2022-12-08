@@ -102,3 +102,6 @@ gem 'fog-aws'
 
 # sitemap
 gem 'sitemap_generator'
+
+# cron
+gem 'whenever', require: false
