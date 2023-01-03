@@ -6,6 +6,7 @@ div.m-2
     div.mb-3
       = form.label :description, class: 'form-label'
       = form.text_field :description, class: 'form-control'
+      = render "layouts/error_message_by_flash", model: post, attribute: :description
     div.d-none
       = form.hidden_field :post_type, value: "tweet"
     div.actions
