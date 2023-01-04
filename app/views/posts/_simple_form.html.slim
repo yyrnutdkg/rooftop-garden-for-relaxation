@@ -9,6 +9,9 @@ div.m-2
     div.mb-3
       = form.label :description, class: 'form-label'
       = form.text_field :description, class: 'form-control'
+      - if flash[:danger].present?
+        div.error-description.alert.alert-danger
+          = t('.error-description', item: Post.model_name.human )
     div.d-none
       = form.hidden_field :post_type, value: "tweet"
     div.actions

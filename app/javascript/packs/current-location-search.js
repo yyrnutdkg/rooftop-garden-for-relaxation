@@ -1,5 +1,4 @@
 document.addEventListener('turbolinks:load', () => {
-  //document.getElementById('btn-current-place').style.visibility = 'hidden'
   document.getElementById('btn-current-place').disabled = true;
 
   const currentLocationSearchButtun = document.getElementById('cur-loc-search')
@@ -17,9 +16,7 @@ function success(pos){
   const lng = pos.coords.longitude;
   document.getElementById('q_latitude').value = lat;
   document.getElementById('q_longitude').value = lng;
-  //document.getElementById('cur-loc-search').style.visibility = 'hidden'
   document.getElementById('cur-loc-search').disabled = true;
-  //document.getElementById('btn-current-place').style.visibility = 'visible'
   document.getElementById('btn-current-place').disabled = false;
 }
 
