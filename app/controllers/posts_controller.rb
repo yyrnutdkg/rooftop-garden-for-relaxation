@@ -23,6 +23,7 @@ class PostsController < ApplicationController
       redirect_to place_path(params[:place_id]), success: t('defaults.message.updated', item: Post.model_name.human )
     else
       flash[:danger] = t('defaults.message.not_updated', item: Post.model_name.human )
+      @place = Place.find_by(id: @post.place_id)
       render :edit
     end
   end

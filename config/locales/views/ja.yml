@@ -62,7 +62,8 @@ ja:
   posts:
     edit:
       title: '投稿編集'
-
+    simple_form:
+      error-description: '詳細の入力について確認してください。'
     post_list:
       see-more: 'もっとみる！'
     post:

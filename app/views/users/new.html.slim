@@ -8,15 +8,19 @@ div.container
           div.form-group.p-2
             = f.label :name, (User.human_attribute_name(:name))
             = f.text_field :name, class: 'form-control'
+            = render "layouts/error_message_by_flash", model: @user, attribute: :name, class: 'form-control'
           div.form-group.p-2
             = f.label :email, (User.human_attribute_name(:email))
             = f.text_field :email, class: 'form-control'
+            = render "layouts/error_message_by_flash", model: @user, attribute: :email
           div.form-group.p-2
             = f.label :password, (User.human_attribute_name(:password))
             = f.text_field :password, class: 'form-control'
+            = render "layouts/error_message_by_flash", model: @user, attribute: :password
           div.form-group.p-2
             = f.label :password_confirmation, (User.human_attribute_name(:password_confirmation))
             = f.text_field :password_confirmation, class: 'form-control'
+            = render "layouts/error_message_by_flash", model: @user, attribute: :password_confirmation
           div.actions.p-2.text-center
             = f.submit  t('defaults.register'), class: 'btn btn-primary'
       div.to-login.p-2.text-center
